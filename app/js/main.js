@@ -1,6 +1,6 @@
 $(function () {
 
-  $('.slider__inner').slick({
+  $('.slider-sale__inner').slick({
     dots: false,
     arrows: true,
     fade: true,

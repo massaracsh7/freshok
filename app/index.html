@@ -1,89 +1,126 @@
 <!DOCTYPE html>
 <html lang="ru">
+
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="images/favicon.png" rel="shortcut icon" type="image/x-icon">
+  <link href="images/favicon.png" rel="shortcut icon" type="image/x-icon">
   <link rel="stylesheet" href="css/style.min.css">
   <title>ФрешОк - ОНЛАЙН-МАРКЕТ</title>
 </head>
+
 <body>
 
-<header class="header">
+  <header class="header">
 
-  <div class="header-top">
-    <div class="container">
+    <div class="header-top">
+      <div class="container">
 
-      <div class="inner">
-        <div class="header-top__info">
-          <a class="header-top__delivery" href="#">
-            АДРЕС И ВРЕМЯ ДОСТАВКИ
-          </a>
-          <a class="header-top__phone" href="#">ГОРЯЧАЯ ЛИНИЯ 24/7</a>
-        </div>
-        <nav class="menu">
-          <ul class="menu__list">
-            <li class="menu__item">
-              <a class="menu__link" href="#">ДОСТАВКА</a>
-            </li>
-            <li class="menu__item">
-              <a class="menu__link" href="#">О НАС</a>
-            </li>
-            <li class="menu__item">
-              <a class="menu__link" href="#">НОВОСТИ</a>
-            </li>
-          </ul>
-        </nav>
-      </div>
-
-    </div>
-  </div>
-
-  <div class="header-bottom">
-    <div class="container">
-      <div class="inner">
-
-        <h1 class="sr-only">ФрешОк</h1>
-        <a class="logo" href="#">
-          <img class="logo__img" src="images/logo.png" alt="site logo">
-        </a>
-
-        <form class="form-check">
-          <div class="form-check__list">
-            <select class="form-check__items" name="product">
-              <option>Каталог продуктов</option>
-            </select>
+        <div class="inner">
+          <div class="header-top__info">
+            <a class="header-top__delivery" href="#">
+              АДРЕС И ВРЕМЯ ДОСТАВКИ
+            </a>
+            <a class="header-top__phone" href="#">ГОРЯЧАЯ ЛИНИЯ 24/7</a>
           </div>
-        </form>
-
-
-        <form class="form-search" >
-          <input class="form-search__text" name="search" placeholder="Найти в магазине ..." type="search"
-            size="40">
-          <button class="form-search__btn" type="submit">Поиск</button>
-        </form>
-
-        <div class="user-nav">
-          <a class="user-nav__link user-nav__link--user" href="#">
-          </a>
-          <a class="user-nav__link user-nav__link--heart" href="#">
-            <span class="user-nav__num">12</span>
-          </a>
-                   <a class="user-nav__link user-nav__link--cart" href="#">
-            <span class="user-nav__num">12</span>
-          </a>
+          <nav class="menu">
+            <ul class="menu__list">
+              <li class="menu__item">
+                <a class="menu__link" href="#">ДОСТАВКА</a>
+              </li>
+              <li class="menu__item">
+                <a class="menu__link" href="#">О НАС</a>
+              </li>
+              <li class="menu__item">
+                <a class="menu__link" href="#">НОВОСТИ</a>
+              </li>
+            </ul>
+          </nav>
         </div>
 
       </div>
     </div>
-  </div>
 
-</header>
+    <div class="header-bottom">
+      <div class="container">
+        <div class="inner">
 
-<main class="main">
-  
-</main>
+          <h1 class="sr-only">ФрешОк</h1>
+          <a class="logo" href="#">
+            <img class="logo__img" src="images/logo.png" alt="site logo">
+          </a>
+
+          <form class="form-check">
+            <div class="form-check__list">
+              <select class="form-check__items" name="product">
+                <option>Каталог продуктов</option>
+              </select>
+            </div>
+          </form>
+
+
+          <form class="form-search">
+            <input class="form-search__text" name="search" placeholder="Найти в магазине ..." type="search" size="40">
+            <button class="form-search__btn" type="submit">Поиск</button>
+          </form>
+
+          <div class="user-nav">
+            <a class="user-nav__link user-nav__link--user" href="#">
+            </a>
+            <a class="user-nav__link user-nav__link--heart" href="#">
+              <span class="user-nav__num">12</span>
+            </a>
+            <a class="user-nav__link user-nav__link--cart" href="#">
+              <span class="user-nav__num">12</span>
+            </a>
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+  </header>
+
+  <main class="main">
+    <section class="slider-sale">
+      <h2 class="sr-only">Распродажи</h2>
+      <div class="slider-sale__inner">
+
+        <div class="slider-sale__item" style="background-image: url('images/slider/1.jpg');">
+          <div class="slider-sale__content container">
+            <h3 class="slider-sale__title"> СВЕЖАЧОК ВАМ в ХАТУ
+            <span class="slider-sale__subtitle">Скидка -50%</span> </h3>
+            <p class="slider-sale__text">Только с 7 по 13 июля скидка на сезонные фрукты и овощи до 50%. Торопитесь!.
+            </p>
+            <button class="btn" type="button">Купить сейчас</button>
+          </div>
+        </div>
+
+        <div class="slider-sale__item" style="background-image: url('images/slider/2.jpg');">
+          <div class="slider-sale__content container">
+            <h3 class="slider-sale__title"> НАКРУТИ СЕБЕ ТОМАТОВ <span class="slider-sale__subtitle"> АКЦИЯ: 3 кг по цене 1 </span> </h3>
+            <p class="slider-sale__text">Только с 12 по 15 июля скидка на домашние помидорчики
+            </p>
+            <button class="btn" type="button">Купить сейчас</button>
+          </div>
+        </div>
+
+        <div class="slider-sale__item" style="background-image: url('images/slider/3.jpg');">
+          <div class="slider-sale__content container">
+            <h3 class="slider-sale__title"> Пусть остальные позеленеют от зависти <span class="slider-sale__subtitle"> Распродажа зелени</span> </h3>
+            <button class="btn" type="button">Купить сейчас</button>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+
+
+
+
+  </main>
 
   <footer class="footer">
     <div class="container">
@@ -180,6 +217,7 @@
     </div>
   </footer>
 
-<script src="js/main.min.js"></script>
+  <script src="js/main.min.js"></script>
 </body>
+
 </html>
