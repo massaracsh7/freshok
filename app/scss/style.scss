@@ -1,6 +1,7 @@
 @import 'vars';
 @import 'fonts';
 @import 'reset';
+@import 'libs';
 @import 'global';
 
 
@@ -138,20 +139,18 @@
 
   &__text,
   &__btn {
-    border: 0;
     padding-left: 52px;
     padding-right: 52px;
   }
 
   &__text {
     color: $dark-800;
+    border: 0;
   }
 
   &__btn {
-    color: $white;
     background-color: $dark-800;
-    text-transform: uppercase;
-    border-radius: 0 6px 6px 0;
+    @extend %form-btn;
   }
 }
 
@@ -202,8 +201,90 @@
   }
 }
 
-/* slider */
+/* footer */
 
+.footer {
+  background-color: $dark-800;
+  color: $white;
+  font-size: 14px;
+  @extend %opensans-400;
+  padding-top: 36px;
+
+  &__logo {
+    display: block;
+    margin-bottom: 30px;
+  }
+}
+
+.footer-top {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 30px;
+
+  &__title {
+    margin-bottom: 18px;
+    line-height: 1;
+  }
+
+  &__form {
+    border-radius: 6px;
+    background-color: white;
+  }
+
+  &__input {
+    width: 180px;
+    padding: 12px;
+    font-size: 12px;
+    border-color: transparent;
+    border-radius: 6px;
+  }
+
+  &__btn {
+    width: 117px;
+    background-color: $green-900;
+    padding-top: 14px;
+    padding-bottom: 14px;
+    font-size: 12px;
+    @extend %form-btn;
+  }
+
+  &__list {
+    column-count: 3;
+    column-gap: 74px;
+  }
+
+  &__link,
+  &__phone,
+  &__adress {
+    display: block;
+    margin-bottom: 18px;
+  }
+
+  &__contacts {
+    width: 215px;
+  }
+
+  &__social-list {
+    width: 163px;
+    display: flex;
+    justify-content: space-between;
+  }
+}
+
+.footer-bottom {
+  padding-top: 24px;
+  border-top: 1px solid $white;
+  height: 77px;
+
+  &__payment-list {
+    display: flex;
+  }
+
+  &__payment-item:not(:last-child) {
+    margin-right: 24px;
+  }
+
+}
 
 
 

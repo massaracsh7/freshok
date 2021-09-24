@@ -50,3 +50,10 @@ $white: #FFFFFF;
   font-family: "Ruda-Bold";
   font-weight: 900;
 }
+
+%form-btn {
+      text-transform: uppercase;
+      border: 0;
+      border-radius: 0 6px 6px 0;
+      color: $white;
+}
