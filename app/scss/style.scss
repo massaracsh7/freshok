@@ -355,5 +355,192 @@
   background-position: center center;
 }
 
+/*advantages*/
+.advant {
+  background-color: $silver-100;
+  padding-top: 48px;
+  padding-bottom: 30px;
+
+  &__list {
+    display: flex;
+    justify-content: center;
+  }
+
+  &__item {
+    max-width: 264px;
+    padding-left: 74px;
+    background-repeat: no-repeat;
+    background-position: left top;
+  }
+
+  &__item--delivery {
+    background-image: url('../images/icons/scooter.svg');
+  }
+
+  &__item--return {
+    background-image: url('../images/icons/return.svg');
+  }
+
+  &__item--support {
+    background-image: url('../images/icons/support.svg');
+  }
+
+  &__item:not(:last-child) {
+    margin-right: 65px;
+  }
+
+  &__title {
+    font-size: 16px;
+    margin-bottom: 7px;
+  }
+
+  &__text {
+    @extend %opensans-400;
+    color: $dark-500;
+  }
+}
+
+/*best-product*/
+.best-product {
+  &__filters {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 48px;
+  }
+
+  &__filter:not(:last-child) {
+    margin-right: 24px;
+  }
+
+  &__btn {
+    @extend %opensans-700;
+    font-size: 15px;
+    line-height: 1.4;
+    color: $dark-500;
+    text-transform: uppercase;
+    border-bottom: 3px solid transparent;
+
+    &:hover {
+      border-bottom: 3px solid #E0EDCF;
+    }
+  }
+}
+
+.product-items {
+  display: grid;
+  min-height: 848px;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  grid-gap: 30px;
+  margin-bottom: 48px;
+}
+
+.product-card {
+  position: relative;
+  padding-top: 56px;
+  padding-bottom: 18px;
+  padding-right: 18px;
+  padding-left: 18px;
+  border: 1px solid $silver-100;
+  border-radius: 6px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
+ 
+  &__title {
+    text-align: left;
+    font-size: 14px;
+    @extend %opensans-600;
+    line-height: 1.4;
+    color: $dark-900;
+    overflow: hidden;
+    height: 69px;
+    margin-top: 10px;
+  }
+
+  &__price {
+    @extend %opensans-400;
+    color: $dark-500;
+    line-height: 1;
+  }
+
+  &__price--before {
+    color: $silver-600;
+    position: relative;
+    
+    &::before {
+      content: "";
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      left: 0;
+      bottom: 6px;
+      border-bottom: 1px solid #C1C1C1;
+      transform: rotate(-14.99deg);
+    }
+  }
+
+  &__buy {
+    position: absolute;
+    right: 18px;
+    bottom: 18px;
+    width: 32px;
+    height: 32px;
+    background-color: $green-900;
+    background-image: url('../images/icons/products-cart.svg');
+    background-repeat: no-repeat;
+    background-position: center center;
+  }
+
+  &__like {
+    position: absolute;
+    top: 17px;
+    right: 12px;
+    width: 32px;
+    height: 32px;
+    background-image: url('../images/icons/Vector.svg');
+    background-color: $white;
+    background-repeat: no-repeat;
+    background-position: center center;
+  }
+
+  &__badge,
+  &__badge--2 {
+    position: absolute;
+    left: 12px;
+    color: $white;
+    text-transform: uppercase;
+    @extend %opensans-700;
+    border-radius: 6px;
+    font-size: 10px;
+    line-height: 1;
+    padding: 3px 6px;
+  }
+
+  &__badge {
+    top: 12px;
+  }
+
+  &__badge--2 {
+    top: 34px;
+  }
+
+  &__new {
+    background-color: $green-900;
+  }
+
+  &__hit {
+    background-color: $orange-900;
+  }
+
+  &__per {
+    background-color: $red-900;
+  }
+
+
+
+}
+
 
 @import 'media';

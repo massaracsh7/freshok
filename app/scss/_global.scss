@@ -55,4 +55,10 @@ body {
   color: $white;
   border-radius: 6px;
   background-color: $green-900;
+  border: 1px solid $green-900;
+}
+
+.section {
+  padding: 72px 0;
+  text-align: center;
 }
