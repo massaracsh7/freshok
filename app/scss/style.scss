@@ -24,11 +24,19 @@
     margin-right: 48px;
     padding-left: 44px;
     position: relative;
+
+    &:hover {
+      opacity: 0.7;
+    }
   }
 
   &__phone {
     padding-left: 33px;
     position: relative;
+
+    &:hover {
+      opacity: 0.7;
+    }
   }
 
   &__delivery:before,
@@ -63,6 +71,12 @@
   &__item:not(:last-child) {
     margin-right: 24px;
   }
+
+  &__link {
+    &:hover {
+      opacity: 0.7;
+    }
+  }
 }
 
 /*header-bottom*/
@@ -89,18 +103,22 @@
 .form-check {
   &__list {
     position: relative;
-
     &::after {
       content: "";
       position: absolute;
-      background-image: url('../images/icons/open.svg');
-      background-repeat: no-repeat;
-      background-position: center center;
+      border-style: solid;
+      border-width: 6px 5px 0 5px;
+      border-color: $green-900 transparent transparent transparent;
       width: 7px;
       height: 4px;
       top: 50%;
       right: 14px;
     }
+    &:hover::after,
+    &:active::after {
+      transform: rotate(180deg);
+    }
+
   }
 
   &__items {
@@ -116,6 +134,10 @@
     background-image: url('../images/icons/nav-icon.svg');
     background-repeat: no-repeat;
     background-position: 18px center;
+    &:hover,
+    &:active {
+      background-color: $green-200;
+    }
   }
 }
 
@@ -141,16 +163,25 @@
   &__btn {
     padding-left: 52px;
     padding-right: 52px;
+    border: 0;
   }
 
   &__text {
     color: $dark-800;
-    border: 0;
   }
 
   &__btn {
     background-color: $dark-800;
-    @extend %form-btn;
+    text-transform: uppercase;
+    border-radius: 0px 6px 6px 0px;
+
+    &:hover {
+      background: rgba(49, 53, 43, 0.85);
+    }
+
+    &:active {
+      background-color: $dark-800;
+    }
   }
 }
 
@@ -159,11 +190,16 @@
   align-items: center;
 
   &__link {
+    display: block;
     height: 32px;
     width: 32px;
     background-repeat: no-repeat;
     background-position: center center;
     position: relative;
+
+    &:hover {
+      opacity: 0.7;
+    }
   }
 
   &__link--user {
@@ -241,11 +277,10 @@
 
   &__btn {
     width: 117px;
-    background-color: $green-900;
-    padding-top: 14px;
-    padding-bottom: 14px;
+    padding: 14px 0;
     font-size: 12px;
-    @extend %form-btn;
+    text-transform: uppercase;
+    border-radius: 0px 6px 6px 0px;
   }
 
   &__list {
@@ -269,6 +304,36 @@
     display: flex;
     justify-content: space-between;
   }
+
+  &__social-link {
+    display: block;
+    height: 32px;
+    width: 32px;
+    background-repeat: no-repeat;
+    background-position: center center;
+
+    &:hover {
+      opacity: 0.7;
+    }
+  }
+
+  &__social-link--fb {
+    background-image: url(../images/icons/facebook.svg);
+  }
+
+  &__social-link--yt {
+    background-image: url(../images/icons/youtube.svg);
+  }
+
+  &__social-link--tl {
+    background-image: url(../images/icons/telegram.svg);
+  }
+
+  &__social-link--in {
+    background-image: url(../images/icons/instagram.svg);
+  }
+
+
 }
 
 .footer-bottom {
@@ -341,7 +406,7 @@
 }
 
 .slick-next {
-  right: 3%;
+  right: 60px;
   background-image: url(../images/icons/next.svg);
   background-repeat: no-repeat;
   background-position: center center;
@@ -349,7 +414,7 @@
 
 .slick-prev {
   z-index: 1;
-  left: 3%;
+  left: 60px;
   background-image: url(../images/icons/prev.svg);
   background-repeat: no-repeat;
   background-position: center center;
@@ -415,13 +480,13 @@
   &__btn {
     @extend %opensans-700;
     font-size: 15px;
-    line-height: 1.4;
     color: $dark-500;
     text-transform: uppercase;
     border-bottom: 3px solid transparent;
-
-    &:hover {
-      border-bottom: 3px solid #E0EDCF;
+    &:hover,
+    &:active,
+    &:focus {
+      border-bottom: 3px solid $green-200;
     }
   }
 }
@@ -433,21 +498,45 @@
   grid-template-rows: repeat(2, 1fr);
   grid-gap: 30px;
   margin-bottom: 48px;
+
+  &__btn {
+    background-color: $white;
+    color: $green-900;
+
+    &:hover {
+      background-color: $green-200;
+    }
+
+    &:active {
+      box-shadow: inset 0px 10px 4px rgba(0, 0, 0, 0.1);
+      color: rgba(99, 166, 14, 0.5);
+    }
+
+    &:focus {
+      box-shadow: 0px 0px 0px 4px rgba(99, 166, 14, 0.5);
+    }
+  }
 }
 
 .product-card {
-  position: relative;
-  padding-top: 56px;
-  padding-bottom: 18px;
-  padding-right: 18px;
-  padding-left: 18px;
+  max-width: 300px;
+  height: 409px;
   border: 1px solid $silver-100;
   border-radius: 6px;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  align-items: flex-start;
- 
+  &:hover {
+    border-color: $green-900;
+  }
+
+  &__box-img {
+    position: relative;
+    height: 290px;
+    padding-top: 48px;
+  }
+
+  &__img {
+    object-fit: cover;
+  }
+
   &__title {
     text-align: left;
     font-size: 14px;
@@ -456,7 +545,18 @@
     color: $dark-900;
     overflow: hidden;
     height: 69px;
-    margin-top: 10px;
+    padding-left: 18px;
+    padding-right: 18px;
+    padding-bottom: 10px;
+  }
+
+  &__wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-left: 21px;
+    padding-right: 18px;
+    padding-bottom: 18px;
   }
 
   &__price {
@@ -468,7 +568,7 @@
   &__price--before {
     color: $silver-600;
     position: relative;
-    
+
     &::before {
       content: "";
       position: absolute;
@@ -476,18 +576,15 @@
       height: 100%;
       left: 0;
       bottom: 6px;
-      border-bottom: 1px solid #C1C1C1;
+      border-bottom: 1px solid $silver-600;
       transform: rotate(-14.99deg);
     }
   }
 
   &__buy {
-    position: absolute;
-    right: 18px;
-    bottom: 18px;
+    padding: 8px;
     width: 32px;
     height: 32px;
-    background-color: $green-900;
     background-image: url('../images/icons/products-cart.svg');
     background-repeat: no-repeat;
     background-position: center center;

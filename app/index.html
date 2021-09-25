@@ -62,14 +62,16 @@
 
           <form class="form-search">
             <input class="form-search__text" name="search" placeholder="Найти в магазине ..." type="search" size="40">
-            <button class="form-search__btn" type="submit">Поиск</button>
+            <button class="btn form-search__btn" type="submit">Поиск</button>
           </form>
 
           <div class="user-nav">
             <a class="user-nav__link user-nav__link--user" href="#">
             </a>
+            <a class="user-nav__item">
             <a class="user-nav__link user-nav__link--heart" href="#">
               <span class="user-nav__num">12</span>
+            </a>
             </a>
             <a class="user-nav__link user-nav__link--cart" href="#">
               <span class="user-nav__num">12</span>
@@ -163,7 +165,7 @@
             <button class="best-product__btn" data-filter=".category-a" type="button"> Фрукты</button>
           </li>
           <li class="best-product__filter">
-            <button class="best-products__btn" data-filter=".category-b" type="button">ОВОЩИ</button>
+            <button class="best-product__btn" data-filter=".category-b" type="button">ОВОЩИ</button>
           </li>
           <li class="best-product__filter">
             <button class="best-product__btn" data-filter=".category-c" type="button"> Напитки</button>
@@ -176,96 +178,129 @@
         <div class="product-items">
 
           <article class="product-card mix category-a">
-            <span class="product-card__badge product-card__new">Новинка</span>
-            <span class="product-card__badge--2 product-card__per">-50%</span>
-            <button class="product-card__like"></button>
-            <img class="product-card__img" src="images/products/ananas.jpg" alt="Ананас" width="300px" height="225px">
+            <div class="product-card__box-img">
+              <span class="product-card__badge product-card__new">Новинка</span>
+              <span class="product-card__badge--2 product-card__per">-50%</span>
+              <button class="product-card__like"></button>
+              <img class="product-card__img" src="images/products/ananas.jpg" alt="Ананас" width="300px" height="225px">
+            </div>
             <h4 class="product-card__title">Ананас</h4>
+            <div class="product-card__wrapper">
             <div class="product-card__price">
               <div class="product-card__price--before">1999 ₽</div>
               999 ₽
             </div>
-            <button class="product-card__buy"></button>
+            <button class="btn product-card__buy"></button>
+            </div>
           </article>
 
           <article class="product-card mix category-a">
-            <button class="product-card__like"></button>
-            <img class="product-card__img" src="images/products/lemon.jpg" alt="Лимон" width="300px" height="225px">
+            <div class="product-card__box-img">
+              <button class="product-card__like"></button>
+              <img class="product-card__img" src="images/products/lemon.jpg" alt="Лимон" width="300px"
+                height="225px">
+            </div>
             <h4 class="product-card__title">Лимон</h4>
-            <div class="product-card__price">
-              999 ₽ </div>
-            <button class="product-card__buy"></button>
+            <div class="product-card__wrapper">
+              <div class="product-card__price">
+                999 ₽ </div>
+              <button class="btn product-card__buy"></button>
+            </div>
           </article>
 
           <article class="product-card mix category-a">
-            <span class="product-card__badge product-card__hit">Хит</span>
-            <button class="product-card__like"></button>
-            <img class="product-card__img" src="images/products/dragon fruit.jpg" alt="Питахайя" width="300px"
-              height="234px">
+            <div class="product-card__box-img">
+              <span class="product-card__badge product-card__hit">Хит</span>
+              <button class="product-card__like"></button>
+              <img class="product-card__img" src="images/products/dragon fruit.jpg" alt="Питахайя" width="300px"
+                height="234px">
+            </div>
             <h4 class="product-card__title">Питахайя красная с белой мякотью, 1шт</h4>
+            <div class="product-card__wrapper">
             <div class="product-card__price">
               1019 ₽ </div>
-            <button class="product-card__buy"></button>
+            <button class="btn product-card__buy"></button>
+            </div>
           </article>
 
           <article class="product-card mix category-b">
-            <span class="product-card__badge product-card__new">Новинка</span>
-            <button class="product-card__like"></button>
-            <img class="product-card__img" src="images/products/paprik.jpg" alt="Перец" width="300px" height="225px">
+            <div class="product-card__box-img">
+              <span class="product-card__badge product-card__new">Новинка</span>
+              <button class="product-card__like"></button>
+              <img class="product-card__img" src="images/products/paprik.jpg" alt="Перец" width="300px" height="225px">
+            </div>
             <h4 class="product-card__title">Перец оранжевый, 1кг</h4>
+            <div class="product-card__wrapper">
             <div class="product-card__price">
               349 ₽ </div>
-            <button class="product-card__buy"></button>
+            <button class="btn product-card__buy"></button>
+            </div>
           </article>
 
           <article class="product-card mix category-b">
-            <span class="product-card__badge product-card__hit">Хит</span>
-            <button class="product-card__like"></button>
-            <img class="product-card__img" src="images/products/carrot.jpg" alt="Морковь" width="300px" height="225px">
+            <div class="product-card__box-img">
+              <span class="product-card__badge product-card__hit">Хит</span>
+              <button class="product-card__like"></button>
+              <img class="product-card__img" src="images/products/carrot.jpg" alt="Морковь" width="300px"
+                height="225px">
+            </div>
             <h4 class="product-card__title">Морковь молодая с бабушкиной грядки, 1кг</h4>
+            <div class="product-card__wrapper">
             <div class="product-card__price">
               49 ₽ </div>
-            <button class="product-card__buy"></button>
+            <button class="btn product-card__buy"></button>
+            </div>
           </article>
 
           <article class="product-card mix category-c">
-            <span class="product-card__badge product-card__per">-30%</span>
-            <button class="product-card__like"></button>
-            <img class="product-card__img" src="images/products/juice.jpg" alt="Напиток сокосодержащий" width="298px"
-              height="215px">
+            <div class="product-card__box-img">
+              <span class="product-card__badge product-card__per">-30%</span>
+              <button class="product-card__like"></button>
+              <img class="product-card__img" src="images/products/juice.jpg" alt="Напиток сокосодержащий" width="298px"
+                height="215px">
+            </div>
             <h4 class="product-card__title">Напиток сокосодержащий Sanpellegrino Aranciata Orange Красный апельсин
               безалкогольн...</h4>
-
+              <div class="product-card__wrapper">
             <div class="product-card__price">
               <div class="product-card__price--before">299 ₽ </div>
               199 ₽
             </div>
-            <button class="product-card__buy"></button>
+            <button class="btn product-card__buy"></button>
+            </div>
           </article>
 
           <article class="product-card mix category-c">
-            <span class="product-card__badge product-card__new">Новинка</span>
-            <button class="product-card__like"></button>
-            <img class="product-card__img" src="images/products/coffee.jpg" alt="Кофе" width="300px" height="225px">
+            <div class="product-card__box-img">
+              <span class="product-card__badge product-card__new">Новинка</span>
+              <button class="product-card__like"></button>
+              <img class="product-card__img" src="images/products/coffee.jpg" alt="Кофе" width="300px" height="225px">
+            </div>
             <h4 class="product-card__title">Кофе с коноплей органический Caffé Salomoni 250г</h4>
+            <div class="product-card__wrapper">
             <div class="product-card__price">
               877 ₽ </div>
-            <button class="product-card__buy"></button>
+            <button class="btn product-card__buy"></button>
+              </div>
           </article>
 
           <article class="product-card mix category-d">
-
-            <button class="product-card__like"></button>
-            <img class="product-card__img" src="images/products/ketchup.jpg" alt="Кетчуп" width="300px" height="225px">
+            <div class="product-card__box-img">
+              <button class="product-card__like"></button>
+              <img class="product-card__img" src="images/products/ketchup.jpg" alt="Кетчуп" width="300px"
+                height="225px">
+            </div>
             <h4 class="product-card__title">Кетчуп томатный детский органический Bio-Zentrale 500мл</h4>
+            <div class="product-card__wrapper">
             <div class="product-card__price">
               600 ₽ </div>
-            <button class="product-card__buy"></button>
+            <button class="btn product-card__buy"></button>
+            </div>
           </article>
 
         </div>
 
-        <button class="btn" type="button">
+        <button class="btn product-items__btn" type="button">
           Показать еще
         </button>
 
@@ -290,7 +325,7 @@
 
           <form class="footer-top__form" action="#">
             <input class="footer-top__input" type="email" placeholder="email@email.com" required>
-            <button class="footer-top__btn" type="submit">ПОДПИСАТЬСЯ</button>
+            <button class="btn footer-top__btn" type="submit">ПОДПИСАТЬСЯ</button>
           </form>
         </div>
 
@@ -331,23 +366,23 @@
           </a>
           <ul class="footer-top__social-list">
             <li class="footer-top__social-item">
-              <a class="footer-top__social-link" href="#">
-                <img src="images/icons/facebook.svg" alt="">
+              <a class="footer-top__social-link footer-top__social-link--fb" href="#">
+              
               </a>
             </li>
             <li class="footer-top__social-item">
-              <a class="footer-top__social-link" href="#">
-                <img src="images/icons/youtube.svg" alt="">
+              <a class="footer-top__social-link footer-top__social-link--yt" href="#">
+        
               </a>
             </li>
             <li class="footer-top__social-item">
-              <a class="footer-top__social-link" href="#">
-                <img src="images/icons/telegram.svg" alt="">
+              <a class="footer-top__social-link footer-top__social-link--tl" href="#">
+             
               </a>
             </li>
             <li class="footer-top__social-item">
-              <a class="footer-top__social-link" href="#">
-                <img src="images/icons/instagram.svg" alt="">
+              <a class="footer-top__social-link footer-top__social-link--in" href="#">
+             
               </a>
             </li>
           </ul>
