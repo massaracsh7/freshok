@@ -46,9 +46,17 @@ button,
 textarea,
 select {
   font: inherit;
+  outline: transparent;
 }
 
 a {
   text-decoration: none;
   color: inherit;
+}
+
+button {
+  padding: 0;
+  border: 0;
+  background-color: transparent;
+  cursor: pointer;
 }
