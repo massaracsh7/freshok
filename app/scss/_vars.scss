@@ -3,56 +3,30 @@ $green-800: #4D810C;
 $green-700: rgba(99, 166, 14, 0.5);
 $green-200: #E0EDCF;
 $green-100: #EFF6E7;
+
+$black: #000;
 $dark-900: #121212;
 $dark-800: #31352B;
 $dark-500: #505050;
 $dark-400:rgba(49, 53, 43, 0.85);
+
 $red-900: #CF3E3B;
+
 $orange-900: #FF7A00;
 $yellow-900: #FFB800;
+
 $silver-600: #C1C1C1;
+$silver-400: #CFCFCF;
 $silver-100: #F6F6F6;
+
 $white: #FFFFFF;
 $white-08: rgba(255, 255, 255, 0.8);
 $white-01: rgba(255, 255, 255, 0.1);
 
-%opensans-300 {
-  font-family: 'Opensans-Light';
-  font-weight: 300;
+%opensans {
+  font-family: 'Open Sans', sans-serif;
 }
 
-%opensans-400 {
-  font-family: 'Opensans-Regular';
-  font-weight: 400;
+%ruda {
+  font-family: 'Ruda', sans-serif;
 }
-
-%opensans-600 {
-  font-family: "Opensans-Semibold";
-  font-weight: 600;
-}
-
-%opensans-700 {
-  font-family: "Opensans-Bold";
-  font-weight: 700;
-}
-
-%ruda-400 {
-  font-family: 'Ruda-Regular';
-  font-weight: 400;
-}
-
-%ruda-600 {
-  font-family: "Ruda-Semibold";
-  font-weight: 600;
-}
-
-%ruda-700 {
-  font-family: "Ruda-Bold";
-  font-weight: 700;
-}
-
-%ruda-900 {
-  font-family: "Ruda-Bold";
-  font-weight: 900;
-}
-
