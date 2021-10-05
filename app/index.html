@@ -7,18 +7,97 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link href="images/favicon.png" rel="shortcut icon" type="image/x-icon">
   <link rel="stylesheet" href="css/style.min.css">
-  <title>фрешок - онлайн-маркет</title>
+  <title>Фрешок - онлайн-маркет</title>
 </head>
 
 <body>
   <h1 class="sr-only">фрешок - интернет-магазин продуктов</h1>
+  <div class="mob-nav">
+    <a class="mob-nav__logo" href="#">
+      <img class="mob-nav__img" src="images/logo-mob.svg" alt="логотип сайта фрешок" width="200" height="60">
+    </a>
+    <div class="mob-nav__user">
+      <svg height="32" width="25">
+        <use xlink:href="images/sprite.svg#user"></use>
+      </svg>
+      <a class="mob-nav__user-link" href="#">Вход</a>
+      <a class="mob-nav__user-link" href="#">Регистрация</a>
+    </div>
+    <button class="mob-nav__catalog header__catalog" type="button">Каталог продуктов</button>
+    <address class="mob-nav__contacts footer__contacts">
+      <div class="mob-nav__data footer__data">
+        <a class="mob-nav__phone" href="tel:+7 907 288 365"> +7 907 288 365</a>
+
+        <a class="mob-nav__address" href="#"> Санкт-Петербург, Ул.<br> Ленина, 1
+        </a>
+      </div>
+      <ul class="mob-nav__social-list footer__social-list">
+        <li class="mob-nav__social-item footer__social-item">
+          <a class="mob-nav__social-link footer__social-link" href="#" aria-label="facebook">
+            <svg height="32" width="32">
+              <use xlink:href="images/sprite.svg#facebook"></use>
+            </svg>
+          </a>
+        </li>
+
+        <li class="footer__social-item">
+          <a class="mob-nav__social-link footer__social-link" href="#" aria-label="youtube">
+            <svg height="32" width="32">
+              <use xlink:href="images/sprite.svg#youtube"></use>
+            </svg>
+          </a>
+        </li>
+
+        <li class="footer__social-item">
+          <a class="mob-nav__social-link footer__social-link" href="#" aria-label="telegram">
+            <svg height="32" width="32">
+              <use xlink:href="images/sprite.svg#telegram"></use>
+            </svg>
+          </a>
+        </li>
+
+        <li class="footer__social-item">
+          <a class="mob-nav__social-link footer__social-link" href="#" aria-label="instagram">
+            <svg height="32" width="32">
+              <use xlink:href="images/sprite.svg#instagram"></use>
+            </svg>
+          </a>
+        </li>
+      </ul>
+    </address>
+    <ul class="mob-nav__menu footer__menu">
+      <li class="footer__item">
+        <a class="footer__link" href="#">О нас</a>
+      </li>
+      <li class="footer__item">
+        <a class="footer__link" href="#">Контакты</a>
+      </li>
+      <li class="footer__item">
+        <a class="footer__link" href="#">Публичная оферта</a>
+      </li>
+      <li class="footer__item">
+        <a class="footer__link" href="#">Оплата и доставка</a>
+      </li>
+      <li class="footer__item">
+        <a class="footer__link" href="#">Вакансии</a>
+      </li>
+      <li class="footer__item">
+        <a class="footer__link" href="#">Акции</a>
+      </li>
+      <li class="footer__item">
+        <a class="footer__link" href="#">Отзывы</a>
+      </li>
+      <li class="footer__item">
+        <a class="footer__link" href="#">Новости</a>
+      </li>
+    </ul>
+  </div>
 
   <header class="header">
-
     <nav class="header__top">
       <div class="container">
-
         <div class="header__inner  header__inner--top">
+          <button class="header__btn" aria-label="открыть меню" type="button"></button>
           <ul class="header__info info">
             <li class="info__item">
               <a class="info__link info__link--delivery" href="#">
@@ -54,19 +133,25 @@
 
           <a class="logo" href="#">
             <img class="logo__img" src="images/logo.svg" alt="логотип сайта фрешок" width="200" height="60">
+
           </a>
 
           <button class="header__catalog" type="button">Каталог продуктов</button>
+
 
           <form class="header__form form-search">
             <label class="sr-only">Найти продукт</label>
             <input class="form-search__text" name="search" placeholder="Найти в магазине ..." type="search" required>
             <button class="btn form-search__btn" type="submit">поиск</button>
-
           </form>
 
-          <div class="user-nav">
 
+          <div class="user-nav">
+            <button class="form-search__open" type="button">
+              <svg height="24" width="24">
+                <use xlink:href="images/sprite.svg#search"></use>
+              </svg>
+            </button>
             <a class="user-nav__link user-nav__link--user" href="#" aria-label="профиль">
               <svg height="31" width="32">
                 <use xlink:href="images/sprite.svg#user"></use>
@@ -100,7 +185,7 @@
       <h2 class="sr-only">Распродажи</h2>
       <ul class="slider-sale__inner">
 
-        <li class="slider-sale__item" style="background-image: url('images/slider/1.jpg');">
+        <li class="slider-sale__item slider-sale__item--1" style="background-image: url('images/slider/1.jpg');">
           <div class="container">
             <div class="slider-sale__content">
               <h3 class="slider-sale__title"> Свежачок вам в хату
@@ -117,7 +202,7 @@
           </div>
         </li>
 
-        <li class="slider-sale__item" style="background-image: url('images/slider/2.jpg');">
+        <li class="slider-sale__item slider-sale__item--2" style="background-image: url('images/slider/2.jpg');">
           <div class="container">
             <div class="slider-sale__content">
               <h3 class="slider-sale__title"> накрути себе томатов
@@ -134,7 +219,7 @@
           </div>
         </li>
 
-        <li class="slider-sale__item" style="background-image: url('images/slider/3.jpg');">
+        <li class="slider-sale__item slider-sale__item--3" style="background-image: url('images/slider/3.jpg');">
           <div class="container">
             <div class="slider-sale__content container">
               <h3 class="slider-sale__title"> пусть остальные позеленеют от зависти
