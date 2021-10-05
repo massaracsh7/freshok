@@ -24,7 +24,7 @@ $tn: 375;
 
 
 @mixin max-w($width) {
-  @media only screen and (max-width: $width 'px') {
+  @media only screen and (max-width: $width+ 'px') {
     @content;
   }
 } 
