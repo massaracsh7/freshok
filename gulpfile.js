@@ -3,7 +3,7 @@ const {
   dest,
   watch,
   parallel,
-  series 
+  series
 } = require('gulp');
 const scss = require('gulp-sass')(require('sass'));
 const concat = require('gulp-concat');
@@ -51,7 +51,9 @@ function browsersync() {
     server: {
       baseDir: 'app/'
     },
-    notofy: false
+    notofy: false,
+    /*host: 192.168.100.5,
+    online: true*/
   })
 }
 

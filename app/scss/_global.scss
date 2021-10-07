@@ -1,13 +1,12 @@
- html {
+  html {
    @include max-w($xl) {
      overflow: auto;
    }
- }
-
+ } 
 
  body {
    overflow: auto;
- }
+ } 
 
  html,
  body {
