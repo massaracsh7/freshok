@@ -9,6 +9,24 @@
 /*header*/
 
 .header {
+  &--close .header__btn {
+    border: none;
+    position: absolute;
+    top: 47px;
+    right: 15%;
+  }
+
+  &--close .header__btn:after {
+    transform: rotate(45deg);
+    top: 0;
+    background-color: #000;
+  }
+
+  &--close .header__btn:before {
+    transform: rotate(-45deg);
+    top: 0;
+    background-color: #000;
+  }
 
   &__top {
     background-color: $dark-800;
@@ -19,30 +37,16 @@
     text-transform: uppercase;
     padding: 17px 0 15px;
 
-    &--close .header__btn {
-      border: none;
-      position: absolute;
-      top: 47px;
-      right: 15%;
-    }
-    &--close .header__btn:after {
-      transform: rotate(45deg);
-      top: 0;
-      background-color: #000;
-    }
-    &--close .header__btn:before {
-      transform: rotate(-45deg);
-      top: 0;
-      background-color: #000;
-    }
   }
 
   &__inner {
     display: flex;
     align-items: center;
+
     @include max-w($lg) {
       justify-content: space-between;
     }
+
     &--top {
       justify-content: space-between;
     }
@@ -50,6 +54,7 @@
 
   &__btn {
     display: none;
+
     @include max-w($lg) {
       display: block;
       width: 30px;
@@ -58,8 +63,9 @@
       border-bottom: 2px solid #fff;
       background-color: transparent;
       position: relative;
-      z-index: 2;
+      z-index: 3;
       transition: transform 0.5s;
+
       &::after,
       &::before {
         content: "";
@@ -87,48 +93,7 @@
     }
   }
 
-  &__catalog {
-    margin-right: 30px;
-    width: 240px;
-    color: $green-900;
-    background-color: $white;
-    padding: 15px 38px 15px 61px;
-    border-radius: 6px;
-    position: relative;
-    background-image: url('../images/icons/nav-icon.svg');
-    background-repeat: no-repeat;
-    background-position: 18px center;
-    transition: background-color 0.5s;
 
-    &:hover,
-    &:active {
-      background-color: $green-200;
-    }
-
-    &::after {
-      content: "";
-      position: absolute;
-      background-image: url('../images/icons/open.svg');
-      background-repeat: no-repeat;
-      width: 7px;
-      height: 4px;
-      top: 50%;
-      right: 14px;
-    }
-
-    &:hover::after,
-    &:active::after {
-      transform: rotate(180deg);
-    }
-
-    @include max-w($xl) {
-      padding: 15px 38px 15px 45px;
-    }
-
-    @include max-w($lg) {
-      display: none;
-    }
-  }
 
   .logo {
     margin-right: 23px;
@@ -234,6 +199,49 @@
   }
 }
 
+.open-catalog {
+  margin-right: 30px;
+  width: 240px;
+  color: $green-900;
+  background-color: $white;
+  padding: 15px 38px 15px 61px;
+  border-radius: 6px;
+  position: relative;
+  background-image: url('../images/icons/nav-icon.svg');
+  background-repeat: no-repeat;
+  background-position: 18px center;
+  transition: background-color 0.5s;
+
+  &:hover,
+  &:active {
+    background-color: $green-200;
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    background-image: url('../images/icons/open.svg');
+    background-repeat: no-repeat;
+    width: 7px;
+    height: 4px;
+    top: 50%;
+    right: 14px;
+  }
+
+  &:hover::after,
+  &:active::after {
+    transform: rotate(180deg);
+  }
+
+  @include max-w($xl) {
+    padding: 15px 38px 15px 45px;
+  }
+
+  @include max-w($lg) {
+    display: none;
+  }
+}
+
 
 .form-search {
   margin-right: 43px;
@@ -289,27 +297,7 @@
     }
   }
 
-  &__open {
-    display: none;
 
-    @include max-w($lg) {
-      display: block;
-      width: 44px;
-      height: 44px;
-      fill: $white;
-      padding: 10px;
-      margin-right: 10px;
-      border-radius: 6px;
-      border: 0;
-
-      &:focus,
-      &:hover,
-      &:active {
-        background-color: $white-01;
-      }
-    }
-
-  }
 
   @include max-w($xl) {
     font-size: 14px;
@@ -347,6 +335,7 @@
     }
   }
 }
+
 
 .user-nav {
   display: flex;
@@ -389,6 +378,27 @@
     background-color: $white;
     color: $red-900;
     border-radius: 50%;
+  }
+  .user-nav__open {
+    display: none;
+
+    @include max-w($lg) {
+      display: block;
+      width: 44px;
+      height: 44px;
+      fill: $white;
+      padding: 10px;
+      margin-right: 10px;
+      border-radius: 6px;
+      border: 0;
+
+      &:focus,
+      &:hover,
+      &:active {
+        background-color: $white-01;
+      }
+    }
+
   }
 }
 
@@ -797,12 +807,11 @@
     text-align: left;
     color: $dark-900;
     overflow: hidden;
-    padding-bottom: 10px;
-    padding-top: 15px;
+    padding-top: 20px;
 
     @include max-w($md) {
       height: 72px;
-      padding-top: 5px;
+      padding-top: 12px;
       font-weight: 600;
     }
   }
@@ -997,7 +1006,7 @@
       grid-template-columns: repeat(2, 1fr);
       grid-template-rows: repeat(2, 1fr);
       grid-row-gap: 12px;
-      grid-column-gap: 5px;
+      grid-column-gap: 0;
     }
 
     @include max-w($sm) {
@@ -1074,9 +1083,8 @@
     justify-content: space-around;
     align-items: center;
 
-    @include max-w($md) {
-      display: -webkit-box;
-      margin: 0 63px;
+    @include max-w($lg) {
+      margin-left: 60px;
     }
   }
 
@@ -1087,13 +1095,7 @@
     &:hover {
       opacity: 1;
     }
-
-    @include max-w($md) {
-      width: 80px;
-      margin-right: 95px;
-    }
   }
-
 }
 
 /*news*/
@@ -1150,14 +1152,15 @@
     box-shadow: 0 3px 3px rgba(0, 0, 0, 0.25);
     border-radius: 6px;
     position: relative;
+        @include max-w($md) {
+          margin: 0 auto;
+          max-width: 410px;
+        }
+
   }
 
   &__img {
     object-fit: cover;
-
-    @include max-w($md) {
-      width: 100%;
-    }
   }
 
   &__date {
@@ -1202,11 +1205,9 @@
   color: $white;
   font-weight: 400;
   padding-top: 31px;
-
-  @include max-w($md) {
+  @include max-w($lg) {
     padding-top: 24px;
     padding-bottom: 48px;
-
     .container {
       padding: 0;
     }
@@ -1215,9 +1216,8 @@
   &__logo {
     display: block;
     margin-bottom: 30px;
-
     .logo__img {
-      @include max-w($md) {
+      @include max-w($lg) {
         margin: 0 auto;
       }
     }
@@ -1227,8 +1227,7 @@
   &__inner {
     display: flex;
     justify-content: space-between;
-
-    @include max-w($md) {
+    @include max-w($lg) {
       flex-direction: column-reverse;
       align-items: center;
     }
@@ -1238,65 +1237,72 @@
     margin-bottom: 30px;
   }
 
-  &__menu {
-    column-count: 3;
-    column-gap: 74px;
-
-    @include max-w($md) {
-      width: 100%;
-      column-gap: 49px;
-      padding: 24px;
-      padding-left: 120px;
-      border-top: 1px solid $white-01;
-      border-bottom: 1px solid $white-01;
-      margin-bottom: 24px;
-    }
-
-    @include max-w($sm) {
-      padding: 24px 0 24px 52px;
-      column-count: 2;
-    }
-  }
-
-  &__link,
-  &__data a {
-    display: block;
-    margin-bottom: 18px;
-  }
 
   &__copy {
     padding-top: 5px;
     text-transform: uppercase;
 
-    @include max-w($md) {
+    @include max-w($lg) {
       padding-top: 0;
       margin-bottom: 24px;
     }
   }
 
-  &__contacts {
-    width: 215px;
 
-    @include max-w($md) {
-      width: 100%;
-      display: flex;
-      justify-content: center;
+
+  &__bottom {
+    padding-top: 25px;
+    border-top: 1px solid $white-01;
+    height: 77px;
+  }
+
+  &__payment-list {
+    display: flex;
+
+    @include max-w($lg) {
       margin-bottom: 24px;
-    }
-
-    @include max-w($sm) {
-      display: block;
-      text-align: center;
     }
   }
 
-  &__data {
-    @include max-w($md) {
-      margin-right: 48px;
+  &__payment-item {
+    display: block;
+    height: 29px;
+    fill: $white;
 
-      @include max-w($sm) {
-        margin-right: 0;
-      }
+    &:not(:last-child) {
+      margin-right: 24px;
+    }
+  }
+
+}
+
+.contacts {
+  width: 215px;
+
+  @include max-w($lg) {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 24px;
+  }
+
+  @include max-w($sm) {
+    display: block;
+    text-align: center;
+  }
+
+  &__data {
+    @include max-w($lg) {
+      margin-right: 48px;
+    }
+
+    @include max-w($sm) {
+      margin-right: 0;
+    }
+
+    a {
+      display: block;
+      margin-bottom: 18px;
     }
   }
 
@@ -1323,37 +1329,12 @@
       opacity: 0.7;
     }
   }
-
-  &__bottom {
-    padding-top: 25px;
-    border-top: 1px solid $white-01;
-    height: 77px;
-  }
-
-  &__payment-list {
-    display: flex;
-
-    @include max-w($md) {
-      margin-bottom: 24px;
-    }
-  }
-
-  &__payment-item {
-    display: block;
-    height: 29px;
-    fill: $white;
-
-    &:not(:last-child) {
-      margin-right: 24px;
-    }
-  }
-
 }
 
 .form-suscribe {
   margin-right: 65px;
 
-  @include max-w($md) {
+  @include max-w($lg) {
     margin: 0 auto;
   }
 
@@ -1391,6 +1372,42 @@
   }
 }
 
+.navbar {
+  column-count: 3;
+  column-gap: 74px;
+
+    @include max-w($xl) {
+      column-gap: 49px;
+    }
+
+  @include max-w($lg) {
+    width: 100%;
+    padding: 24px;
+    padding-left: 120px;
+    border-top: 1px solid $white-01;
+    border-bottom: 1px solid $white-01;
+    margin-bottom: 24px;
+  }
+
+  @include max-w($sm) {
+    padding: 24px 0 24px 52px;
+    column-count: 2;
+  }
+
+  @include max-h($md) {
+    column-gap: 50px;
+    padding-left: 100px;
+  }
+
+  &__link {
+    display: block;
+    margin-bottom: 18px;
+  }
+}
+
+
+
+
 
 /*mobile navigation*/
 .mob-nav {
@@ -1407,7 +1424,7 @@
   transform: translateY(-500%);
 
   &__logo {
-    display: block;
+    display: inline-block;
     margin-bottom: 24px;
   }
 
@@ -1418,11 +1435,12 @@
     fill: $white;
     padding: 7px 15px 9px;
     color: $white;
-    &-link {
-      padding: 0 15px;
-      &:not(:last-child) {
-        border-right: 1px solid $white;
-      }
+  }
+
+  &__link {
+    padding: 0 15px;
+    &--enter {
+      border-right: 1px solid $white;
     }
   }
 
@@ -1436,6 +1454,7 @@
     background-position-x: 15px;
     padding-left: 56px;
     border-radius: 0;
+
     &::after {
       display: none;
     }
@@ -1446,7 +1465,9 @@
     border-top: 1px solid rgba(193, 193, 193, 0.3);
     border-bottom: 1px solid rgba(193, 193, 193, 0.3);
     padding: 24px 0;
-    width: 100%;
+    margin-bottom: 18px;
+    width: 285px;
+    flex-direction: column;
   }
 
   &__data {
@@ -1481,9 +1502,9 @@
     padding-left: 15px;
   }
 
-}
+  &--active {
+    z-index: 2;
+    transform: translateY(0%);
+  }
 
-.mob-nav--active {
-  z-index: 2;
-  transform: translateY(0%);
 }

@@ -2,12 +2,12 @@ $(function () {
 
   $('.slider-sale__inner').slick({
     dots: false,
-    arrows: false,
+    arrows: true,
     fade: true,
     autoplay: false,
     autoplaySpeed: 3000,
     responsive: [{
-      breakpoint: 992,
+      breakpoint: 1200,
       settings: {
         dots: true,
         arrows: false
@@ -30,15 +30,42 @@ $(function () {
   var mixer2 = mixitup(container2, config);
 
   $('.header__btn').on('click', function () {
-    $('.header__top').toggleClass('header__top--close');
-    $('.main').toggleClass('main--close');
+      
     $('.mob-nav').toggleClass('mob-nav--active');
+      $('.main').toggleClass('main--close');
+    $('.header').toggleClass('header--close');
     $('body').toggleClass('lock');
   });
 
-  $('.form-search__open').on('click', function () {
+  $('.user-nav__open').on('click', function () {
     $('.form-search').toggleClass('form-search--active');
     $('.form-search__text').attr("placeholder", "Я ищу...");
+  });
+
+
+  $('.brands__list').slick({
+    dots: false,
+    arrows: false,
+    slidesToShow: 2,
+    slidesToScroll: 2,
+    mobileFirst: true,
+    responsive: [{
+        breakpoint: 576,
+        settings: {
+          slidesToShow: 4
+        }
+      },
+      {
+        breakpoint: 768,
+        settings: {
+          slidesToShow: 4
+        }
+      },
+      {
+        breakpoint: 992,
+        settings: "unslick"
+      }
+    ]
   });
 
 });
