@@ -28,16 +28,16 @@
               <a class="info__link info__link--phone" href="#">горячая линия 24/7</a>
             </li>
           </ul>
-          <div class="header__menu menu">
-            <ul class="menu__list">
-              <li class="menu__item">
-                <a class="menu__link" href="#">доставка</a>
+          <div class="header__menu">
+            <ul class="header__list">
+              <li class="header__item">
+                <a class="header__link" href="#">доставка</a>
               </li>
-              <li class="menu__item">
-                <a class="menu__link" href="#">о нас</a>
+              <li class="header__item">
+                <a class="header__link" href="#">о нас</a>
               </li>
-              <li class="menu__item">
-                <a class="menu__link" href="#">новости</a>
+              <li class="header__item">
+                <a class="header__link" href="#">новости</a>
               </li>
             </ul>
           </div>
@@ -50,11 +50,12 @@
       <div class="container">
 
         <div class="header__inner">
-          <a class="logo" href="#">
+          <a class="logo header__logo" href="#">
 
             <picture class="logo__img">
               <source srcset="images/logo-short.svg" media="(max-width: 992px)">
               <img src="images/logo.svg" alt="логотип сайта фрешок" width="200" height="60">
+            </picture>
           </a>
           <button class="header__catalog open-catalog" type="button">Каталог продуктов</button>
 
@@ -78,14 +79,14 @@
               </svg>
             </a>
 
-            <button class="user-nav__link user-nav__link--heart" type="button aria-label=" избранное">
+            <button class="user-nav__link user-nav__link--heart" type="button" aria-label="избранное">
               <svg height="29" width="32">
                 <use xlink:href="images/sprite.svg#heart"></use>
               </svg>
               <span class="user-nav__num">12</span>
             </button>
 
-            <button class="user-nav__link user-nav__link--cart" type="button href=" #" aria-label="корзина">
+            <button class="user-nav__link user-nav__link--cart" type="button" aria-label="корзина">
               <svg height="31" width="32">
                 <use xlink:href="images/sprite.svg#cart"></use>
               </svg>
@@ -153,43 +154,44 @@
         </ul>
       </address>
 
-      <ul class="mob-nav__menu navbar">
-        <li class="navbar__item">
-          <a class="navbar__link" href="#">О нас</a>
+      <ul class="mob-nav__menu menu">
+        <li class="menu__item">
+          <a class="menu__link" href="#">О нас</a>
         </li>
-        <li class="navbar__item">
-          <a class="navbar__link" href="#">Контакты</a>
+        <li class="menu__item">
+          <a class="menu__link" href="#">Контакты</a>
         </li>
-        <li class="navbar__item">
-          <a class="navbar__link" href="#">Публичная оферта</a>
+        <li class="menu__item">
+          <a class="menu__link" href="#">Публичная оферта</a>
         </li>
-        <li class="navbar__item">
-          <a class="navbar__link" href="#">Оплата и доставка</a>
+        <li class="menu__item">
+          <a class="menu__link" href="#">Оплата и доставка</a>
         </li>
-        <li class="navbar__item">
-          <a class="navbar__link" href="#">Вакансии</a>
+        <li class="menu__item">
+          <a class="menu__link" href="#">Вакансии</a>
         </li>
-        <li class="navbar__item">
-          <a class="navbar__link" href="#">Акции</a>
+        <li class="menu__item">
+          <a class="menu__link" href="#">Акции</a>
         </li>
-        <li class="navbar__item">
-          <a class="navbar__link" href="#">Отзывы</a>
+        <li class="menu__item">
+          <a class="menu__link" href="#">Отзывы</a>
         </li>
-        <li class="navbar__item">
-          <a class="navbar__link" href="#">Новости</a>
+        <li class="menu__item">
+          <a class="menu__link" href="#">Новости</a>
         </li>
       </ul>
     </div>
 
   </header>
 
-
+    <div class="overlay"></div>
   <main class="main">
+  
     <section class="slider-sale">
       <h2 class="sr-only">Распродажи</h2>
       <ul class="slider-sale__inner">
 
-        <li class="slider-sale__item slider-sale__item--1" style="background-image: url('images/slider/1.jpg');">
+        <li class="slider-sale__item slider-sale__item--fresh" style="background-image: url('images/slider/1.jpg');">
           <div class="container">
             <div class="slider-sale__content">
               <h3 class="slider-sale__title"> Свежачок вам в хату
@@ -206,7 +208,7 @@
           </div>
         </li>
 
-        <li class="slider-sale__item slider-sale__item--2" style="background-image: url('images/slider/2.jpg');">
+        <li class="slider-sale__item slider-sale__item--tomato" style="background-image: url('images/slider/2.jpg');">
           <div class="container">
             <div class="slider-sale__content">
               <h3 class="slider-sale__title"> накрути себе томатов
@@ -223,7 +225,7 @@
           </div>
         </li>
 
-        <li class="slider-sale__item slider-sale__item--3" style="background-image: url('images/slider/3.jpg');">
+        <li class="slider-sale__item slider-sale__item--green" style="background-image: url('images/slider/3.jpg');">
           <div class="container">
             <div class="slider-sale__content container">
               <h3 class="slider-sale__title"> пусть остальные позеленеют от зависти
@@ -890,31 +892,30 @@
           </div>
         </form>
 
-
-        <ul class="footer__menu navbar">
-          <li class="navbar__item">
-            <a class="navbar__link" href="#">О нас</a>
+        <ul class="footer__menu menu">
+          <li class="menu__item">
+            <a class="menu__link" href="#">О нас</a>
           </li>
-          <li class="navbar__item">
-            <a class="navbar__link" href="#">Контакты</a>
+          <li class="menu__item">
+            <a class="menu__link" href="#">Контакты</a>
           </li>
-          <li class="navbar__item">
-            <a class="navbar__link" href="#">Публичная оферта</a>
+          <li class="menu__item">
+            <a class="menu__link" href="#">Публичная оферта</a>
           </li>
-          <li class="navbar__item">
-            <a class="navbar__link" href="#">Оплата и доставка</a>
+          <li class="menu__item">
+            <a class="menu__link" href="#">Оплата и доставка</a>
           </li>
-          <li class="navbar__item">
-            <a class="navbar__link" href="#">Вакансии</a>
+          <li class="menu__item">
+            <a class="menu__link" href="#">Вакансии</a>
           </li>
-          <li class="navbar__item">
-            <a class="navbar__link" href="#">Акции</a>
+          <li class="menu__item">
+            <a class="menu__link" href="#">Акции</a>
           </li>
-          <li class="navbar__item">
-            <a class="navbar__link" href="#">Отзывы</a>
+          <li class="menu__item">
+            <a class="menu__link" href="#">Отзывы</a>
           </li>
-          <li class="navbar__item">
-            <a class="navbar__link" href="#">Новости</a>
+          <li class="menu__item">
+            <a class="menu__link" href="#">Новости</a>
           </li>
         </ul>
 

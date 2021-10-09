@@ -32,7 +32,7 @@ $(function () {
   $('.header__btn').on('click', function () {
       
     $('.mob-nav').toggleClass('mob-nav--active');
-      $('.main').toggleClass('main--close');
+      $('.overlay').toggleClass('overlay--active');
     $('.header').toggleClass('header--close');
     $('body').toggleClass('lock');
   });

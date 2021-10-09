@@ -16,11 +16,7 @@
   -webkit-line-clamp: $lines-to-show;
 }
 
-$xl: 1200;
-$lg: 992;
-$md: 768;
-$sm: 576;
-$tn: 375;
+
 
 
 @mixin max-w($width) {
