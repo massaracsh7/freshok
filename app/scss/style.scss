@@ -11,21 +11,23 @@
 .header {
   &--close .header__btn {
     border: none;
+  }
+
+  &--close .header__btn:after,
+  &--close .header__btn:before {
     position: absolute;
-    top: 47px;
-    right: 15%;
+    top: 40px;
+    left: 230px;
+    background-color: $black;
+    transition: transform 0.5s;
   }
 
   &--close .header__btn:after {
     transform: rotate(45deg);
-    top: 0;
-    background-color: #000;
   }
 
   &--close .header__btn:before {
     transform: rotate(-45deg);
-    top: 0;
-    background-color: #000;
   }
 
   &__top {
@@ -64,7 +66,7 @@
       background-color: transparent;
       position: relative;
       z-index: 3;
-      transition: transform 0.5s;
+
 
       &::after,
       &::before {
@@ -93,18 +95,37 @@
     }
   }
 
+  &__menu {
+    @include max-w($lg) {
+      display: none;
+    }
+  }
 
+  &__list {
+    display: flex;
+  }
 
-  .logo {
+  &__item {
+    &:not(:last-child) {
+      margin-right: 29px;
+    }
+  }
+
+  &__link {
+    transition: opacity 0.5s;
+
+    &:hover {
+      opacity: 0.7;
+    }
+  }
+
+  &__logo {
     margin-right: 23px;
 
     @include max-w($lg) {
       overflow: hidden;
       width: 37px;
-
-      &__img {
-        min-width: 137px;
-      }
+      margin-right: 0;
     }
   }
 
@@ -175,30 +196,6 @@
 
 }
 
-.menu {
-  &__list {
-    display: flex;
-  }
-
-  &__item {
-    &:not(:last-child) {
-      margin-right: 29px;
-    }
-  }
-
-  &__link {
-    transition: opacity 0.5s;
-
-    &:hover {
-      opacity: 0.7;
-    }
-  }
-
-  @include max-w($lg) {
-    display: none;
-  }
-}
-
 .open-catalog {
   margin-right: 30px;
   width: 240px;
@@ -242,7 +239,6 @@
   }
 }
 
-
 .form-search {
   margin-right: 43px;
   background-color: $white;
@@ -250,7 +246,7 @@
   border: 0;
   border-radius: 6px;
   position: relative;
-
+  transition: transform 0.5s;
   &:before {
     content: "";
     position: absolute;
@@ -286,7 +282,7 @@
     font-size: 14px;
     background-color: $dark-800;
     text-transform: uppercase;
-    border-radius: 0px 6px 6px 0px;
+    border-radius: 0 6px 6px 0;
 
     &:hover {
       background-color: $dark-400;
@@ -336,7 +332,6 @@
   }
 }
 
-
 .user-nav {
   display: flex;
   align-items: center;
@@ -358,6 +353,8 @@
     }
 
     &:not(:last-child) {
+      margin-right: 10px;
+
       @include max-w($lg) {
         display: none;
       }
@@ -379,6 +376,7 @@
     color: $red-900;
     border-radius: 50%;
   }
+
   .user-nav__open {
     display: none;
 
@@ -418,21 +416,22 @@
     background-size: cover;
     background-position: center center;
     height: 600px;
-
-    &--1 {
+    &--fresh {
       background-image: url('../images/slider/1.jpg');
     }
-
-    &--2 {
+    &--tomato {
       background-image: url('../images/slider/2.jpg');
     }
-
-    &--3 {
+    &--green {
       background-image: url('../images/slider/3.jpg');
     }
 
     @include max-w($md) {
       height: 320px;
+    }
+
+    @include max-h($md) {
+      height: 400px;
     }
   }
 
@@ -458,11 +457,18 @@
     font-weight: 900;
     @include line-clamp(60px, 1.3, 2);
     text-transform: uppercase;
-    width: 790px;
+    max-width: 790px;
+    width: 100%;
     margin-bottom: 8px;
 
     @include max-w($md) {
-      width: 100%;
+      width: 250px;
+      font-size: 20px;
+      height: auto;
+    }
+
+    @include max-h($md) {
+      width: 250px;
       font-size: 20px;
       height: auto;
     }
@@ -498,7 +504,7 @@
       box-shadow 0.6s;
 
     &:focus {
-      box-shadow: 0px 0px 0px 4px rgba($green-900, 0.5);
+      box-shadow: 0 0 0 4px rgba($green-900, 0.5);
     }
 
     &:hover {
@@ -506,7 +512,7 @@
     }
 
     &:active {
-      box-shadow: inset 0px 10px 4px rgba($black, 0.1);
+      box-shadow: inset 0 10px 4px rgba($black, 0.1);
       color: $green-700;
     }
   }
@@ -1036,7 +1042,7 @@
 
     &:first-child {
       color: $white;
-      text-shadow: 1px 1px 0px rgba(0, 0, 0, 0.25);
+      text-shadow: 1px 1px 0 rgba(0, 0, 0, 0.25);
 
       @include max-w($lg) {
         grid-column: 1 / 4;
@@ -1082,10 +1088,10 @@
     display: flex;
     justify-content: space-around;
     align-items: center;
+  }
 
-    @include max-w($lg) {
-      margin-left: 60px;
-    }
+  .slick-slide {
+    padding-left: 60px;
   }
 
   &__item {
@@ -1105,7 +1111,7 @@
     justify-content: space-between;
     align-items: start;
 
-    @include max-w($md) {
+    @include max-w($lg) {
       display: block;
       text-align: left;
       margin-bottom: 24px;
@@ -1124,10 +1130,9 @@
     color: $green-900;
     border-bottom: 2px solid $green-900;
     line-height: 1;
-    letter-spacing: 1.2px;
     font-weight: 700;
 
-    @include max-w($md) {
+    @include max-w($lg) {
       display: inline-block;
       margin-top: 0;
     }
@@ -1139,7 +1144,7 @@
     grid-template-rows: 1fr;
     grid-gap: 30px;
 
-    @include max-w($md) {
+    @include max-w($lg) {
       grid-template-columns: 1fr;
       grid-template-rows: repeat(3, 1fr);
     }
@@ -1152,10 +1157,11 @@
     box-shadow: 0 3px 3px rgba(0, 0, 0, 0.25);
     border-radius: 6px;
     position: relative;
-        @include max-w($md) {
-          margin: 0 auto;
-          max-width: 410px;
-        }
+
+    @include max-w($lg) {
+      margin: 0 auto;
+      max-width: 410px;
+    }
 
   }
 
@@ -1205,9 +1211,11 @@
   color: $white;
   font-weight: 400;
   padding-top: 31px;
+
   @include max-w($lg) {
     padding-top: 24px;
     padding-bottom: 48px;
+
     .container {
       padding: 0;
     }
@@ -1216,6 +1224,7 @@
   &__logo {
     display: block;
     margin-bottom: 30px;
+
     .logo__img {
       @include max-w($lg) {
         margin: 0 auto;
@@ -1227,6 +1236,7 @@
   &__inner {
     display: flex;
     justify-content: space-between;
+
     @include max-w($lg) {
       flex-direction: column-reverse;
       align-items: center;
@@ -1367,18 +1377,18 @@
     padding: 12px 0;
     font-size: 12px;
     text-transform: uppercase;
-    border-radius: 0px 6px 6px 0px;
+    border-radius: 0 6px 6px 0;
     line-height: 1.3;
   }
 }
 
-.navbar {
+.menu {
   column-count: 3;
   column-gap: 74px;
 
-    @include max-w($xl) {
-      column-gap: 49px;
-    }
+  @include max-w($xl) {
+    column-gap: 49px;
+  }
 
   @include max-w($lg) {
     width: 100%;
@@ -1405,23 +1415,21 @@
   }
 }
 
-
-
-
-
 /*mobile navigation*/
 .mob-nav {
+  max-width: 300px;
+  width: 100%;
   position: absolute;
   left: 0;
-  right: 12%;
   top: 0;
   bottom: 0;
   padding-top: 26px;
   background-color: $white;
   font-size: 18px;
   font-weight: 400;
-  transition: transform 0.5s;
-  transform: translateY(-500%);
+  overflow: scroll;
+  transition: transform 0.7s;
+  transform: translateY(-300%);
 
   &__logo {
     display: inline-block;
@@ -1439,6 +1447,7 @@
 
   &__link {
     padding: 0 15px;
+
     &--enter {
       border-right: 1px solid $white;
     }
@@ -1454,7 +1463,6 @@
     background-position-x: 15px;
     padding-left: 56px;
     border-radius: 0;
-
     &::after {
       display: none;
     }
