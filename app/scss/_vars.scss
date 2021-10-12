@@ -38,3 +38,11 @@ $lg: 992;
 $md: 768;
 $sm: 576;
 $tn: 375;
+
+%checkbox-hidden {
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  position: absolute;
+}

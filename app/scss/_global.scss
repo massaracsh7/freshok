@@ -114,3 +114,40 @@
      margin-bottom: 45px;
    }
  }
+
+.breadcrumbs {
+background-color: #F6F6F6;
+margin-bottom: 44px;
+padding: 24px 0;
+  &__list {
+    display: flex;
+  }
+
+  &__item {
+    color: #505050;
+    font-weight: 400;
+    padding-right: 16px;
+    position: relative;
+
+    &::after {
+      content: "";
+      position: absolute;
+      background-image: url('../images/icons/arrow-right.svg');
+      width: 6px;
+      height: 10px;
+      top: 5px;
+      right: 5px;
+    }
+
+    &:last-child {
+      &::after {
+        display: none;
+      }
+    }
+  }
+
+  &__link {
+    color: inherit;
+  }
+
+}
