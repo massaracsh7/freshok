@@ -1,0 +1,366 @@
+/*best-product*/
+.product-filters {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 48px;
+
+  @include max-w($md) {
+    flex-wrap: wrap;
+    align-items: center;
+    margin-bottom: 10px;
+  }
+
+  &__filter {
+    @include max-w($md) {
+      margin-bottom: 15px;
+    }
+
+    &:not(:last-child) {
+      margin-right: 30px;
+
+      @include max-w($md) {
+        margin-right: 25px;
+      }
+    }
+  }
+
+  &__btn {
+    font-weight: 700;
+    font-size: 15px;
+    color: $dark-500;
+    text-transform: uppercase;
+    border-bottom: 3px solid transparent;
+    transition: border 0.5s;
+
+    &:focus,
+    &:hover,
+    &:active {
+      border-bottom: 3px solid $green-200;
+    }
+  }
+}
+
+.best-product,
+.stock-product {
+  text-align: center;
+
+  &__list {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    grid-gap: 30px;
+    margin-bottom: 50px;
+
+    @include max-w($md) {
+      grid-template-columns: repeat(3, 1fr);
+      grid-template-rows: repeat(3, 1fr);
+      grid-gap: 15px;
+      margin-bottom: 24px;
+    }
+
+    @include max-w($sm) {
+      grid-template-columns: repeat(2, 1fr);
+      grid-template-rows: repeat(4, 1fr);
+      grid-gap: 5px;
+      margin-bottom: 24px;
+    }
+  }
+
+  &__btn {
+    font-size: 18px;
+    background-color: $white;
+    color: $green-900;
+    display: inline-block;
+
+    &:focus {
+      box-shadow: 0 0 0 4px rgba($green-900, 0.5);
+    }
+
+    &:hover {
+      background-color: $green-200;
+    }
+
+    &:active {
+      box-shadow: inset 0 10px 4px rgba($black, 0.1);
+      color: $green-700;
+    }
+
+    @include max-w($md) {
+      font-size: 14px;
+      font-weight: 700;
+    }
+  }
+}
+
+.product-card {
+  max-width: 300px;
+  position: relative;
+  padding: 48px 18px 18px 18px;
+  border: 1px solid $silver-400;
+  border-radius: 6px;
+  transition: border 0.5s;
+
+  @include max-w($md) {
+    max-width: 220px;
+    padding: 34px 12px 12px 12px;
+  }
+
+  @include max-w($sm) {
+    max-width: 170px;
+  }
+
+  &:hover {
+    border-color: $green-900;
+  }
+
+  &__box {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    position: absolute;
+    left: 12px;
+    top: 10px;
+  }
+
+  &__badge {
+    color: $white;
+    text-transform: uppercase;
+    font-weight: 700;
+    border-radius: 6px;
+    font-size: 10px;
+    line-height: 1;
+    padding: 3px 6px;
+    margin-bottom: 5px;
+
+    &--new {
+      background-color: $green-900;
+    }
+
+    &--hit {
+      background-color: $orange-900;
+    }
+
+    &--per {
+      background-color: $red-900;
+    }
+  }
+
+  &__like {
+    position: absolute;
+    top: 12px;
+    right: 12px;
+    width: 32px;
+    height: 32px;
+    transition: fill 0.5s;
+    fill: $silver-600;
+
+    &:hover {
+      fill: $orange-900;
+    }
+  }
+
+  &__img {
+    object-fit: cover;
+    width: 300px;
+    height: 225px;
+
+    @include max-w($xl) {
+      width: 168px;
+      height: 126px;
+    }
+  }
+
+  &__title {
+    @include line-clamp(14px, 1.4, 3);
+    height: 82px;
+    text-align: left;
+    color: $dark-900;
+    overflow: hidden;
+    padding-top: 20px;
+
+    @include max-w($md) {
+      height: 72px;
+      padding-top: 12px;
+      font-weight: 600;
+    }
+  }
+
+  &__wrapper {
+    text-align: left;
+  }
+
+  &__offers {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: justify-content;
+    width: max-content;
+    height: 32px;
+    text-align: left;
+
+  }
+
+  &__price {
+    &--new {
+      font-weight: 400;
+      color: $dark-500;
+      line-height: 1;
+    }
+
+    &--old {
+      color: $silver-600;
+      position: relative;
+
+      &::before {
+        content: "";
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        left: 0;
+        bottom: 6px;
+        border-bottom: 1px solid $silver-600;
+        transform: rotate(-14.99deg);
+      }
+    }
+  }
+
+  &__buy {
+    position: absolute;
+    bottom: 15px;
+    right: 20px;
+    padding: 8px;
+    width: 32px;
+    height: 32px;
+    background-image: url('../images/icons/products-cart.svg');
+    background-repeat: no-repeat;
+    background-position: center center;
+
+    @include max-w($md) {
+      bottom: 12px;
+      right: 12px;
+    }
+  }
+
+  &--min {
+    background-color: $white;
+    padding: 12px;
+    height: 124px;
+
+    @include max-w($xl) {
+      max-width: 300px;
+      width: 300px;
+    }
+
+    .product-card {
+      &__link {
+        display: flex;
+      }
+
+      &__img {
+        width: 100px;
+        height: 100px;
+        margin-right: 10px;
+      }
+
+      &__title {
+        padding: 0;
+        margin-bottom: 7px;
+        height: 58px;
+      }
+
+      &__offers {
+        flex-direction: row;
+      }
+
+      &__price {
+        &--old {
+          font-size: 12px;
+          top: 5px;
+
+          &::before {
+            bottom: 23px;
+          }
+        }
+
+        &--new {
+          font-size: 20px;
+          font-weight: 600;
+          margin-right: 12px;
+        }
+
+        span {
+          font-size: 12px;
+        }
+      }
+
+    }
+
+  }
+
+  &__star {
+    position: absolute;
+    bottom: 12px;
+    right: 14px;
+    width: 40px;
+    height: 16px;
+    font-weight: 700;
+    fill: $yellow-900;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  &__status {
+    display: block;
+    margin-bottom: 5px;
+    font-size: 10px;
+    line-height: 1;
+    text-transform: uppercase;
+
+    &--in {
+      color: $green-900;
+    }
+
+    &--out {
+      color: $silver-600;
+    }
+
+    &--end {
+      color: $red-900;
+    }
+  }
+}
+
+.stock-product {
+  background-color: $silver-200;
+  padding: 72px 0;
+
+  @include max-w($md) {
+    padding: 48px 0;
+  }
+
+  &__list {
+    margin-bottom: 48px;
+
+    @include max-w($xl) {
+      grid-template-columns: repeat(3, 1fr);
+      grid-template-rows: repeat(3, 1fr);
+      justify-items: center;
+      grid-gap: 15px;
+      margin-bottom: 24px;
+    }
+
+    @include max-w($lg) {
+      grid-template-columns: repeat(2, 1fr);
+      grid-template-rows: repeat(4, 1fr);
+      justify-items: center;
+      grid-gap: 15px;
+      margin-bottom: 24px;
+    }
+
+    @include max-w($md) {
+      grid-template-columns: 1fr;
+      grid-template-rows: repeat(8, 1fr);
+    }
+  }
+}

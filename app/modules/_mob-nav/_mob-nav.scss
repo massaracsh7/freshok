@@ -1,0 +1,102 @@
+/*mobile navigation*/
+.mob-nav {
+  max-width: 300px;
+  width: 100%;
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  padding-top: 26px;
+  background-color: $white;
+  font-size: 18px;
+  font-weight: 400;
+  overflow: scroll;
+  transition: transform 0.7s;
+  transform: translateY(-300%);
+
+  &__logo {
+    display: inline-block;
+    margin-bottom: 24px;
+  }
+
+  &__user {
+    background-color: $green-900;
+    display: flex;
+    align-items: center;
+    fill: $white;
+    padding: 7px 15px 9px;
+    color: $white;
+  }
+
+  &__link {
+    padding: 0 15px;
+
+    &--enter {
+      border-right: 1px solid $white;
+    }
+  }
+
+  &__catalog {
+    display: block;
+    color: black;
+    width: 100%;
+    text-align: left;
+    background-image: url('../images/sprite.svg#nav-icon');
+    background-size: 25px 19px;
+    background-position-x: 15px;
+    padding-left: 56px;
+    border-radius: 0;
+
+    &::after {
+      display: none;
+    }
+  }
+
+  &__contacts {
+    text-align: left;
+    border-top: 1px solid rgba(193, 193, 193, 0.3);
+    border-bottom: 1px solid rgba(193, 193, 193, 0.3);
+    padding: 24px 0;
+    margin-bottom: 18px;
+    width: 285px;
+    flex-direction: column;
+  }
+
+  &__data {
+    a {
+      margin-bottom: 18px;
+      background-repeat: no-repeat;
+      background-position: 15px center;
+      padding-left: 54px;
+    }
+  }
+
+  &__phone {
+    background-image: url('../images/icons/icon-tel.svg');
+  }
+
+  &__address {
+    background-image: url('../images/icons/geo.svg');
+  }
+
+  &__social-list {
+    margin-left: 15px;
+  }
+
+  &__social-link {
+    fill: #000;
+  }
+
+  &__menu {
+    column-count: 1;
+    text-align: left;
+    padding: 0;
+    padding-left: 15px;
+  }
+
+  &--active {
+    z-index: 2;
+    transform: translateY(0%);
+  }
+
+}

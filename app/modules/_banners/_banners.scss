@@ -1,0 +1,78 @@
+/*banners*/
+
+.banners {
+  &__list {
+    display: grid;
+    grid-template-columns: 2.1fr repeat(2, 1fr);
+    grid-template-rows: 1fr;
+    grid-gap: 30px;
+
+    @include max-w($lg) {
+      grid-template-columns: repeat(2, 1fr);
+      grid-template-rows: repeat(2, 1fr);
+      grid-row-gap: 12px;
+      grid-column-gap: 0;
+    }
+
+    @include max-w($sm) {
+      grid-template-columns: 1fr;
+      grid-template-rows: repeat(3, 1fr);
+      grid-gap: 12px;
+    }
+  }
+
+  &__item {
+    background-position: center center;
+    background-repeat: no-repeat;
+    height: 300px;
+    padding: 76px 32px;
+    border-radius: 6px;
+    text-transform: uppercase;
+    color: $dark-500;
+
+    @include max-w($lg) {
+      max-width: 100%;
+      background-size: cover;
+    }
+
+    @include max-w($sm) {
+      max-width: 345px;
+    }
+
+    &:first-child {
+      color: $white;
+      text-shadow: 1px 1px 0 rgba(0, 0, 0, 0.25);
+
+      @include max-w($lg) {
+        grid-column: 1 / 4;
+        grid-row: 1;
+      }
+
+      @include max-w($sm) {
+        grid-column: 1;
+        grid-row: 1;
+      }
+    }
+  }
+
+  &__title {
+    @extend %ruda;
+    font-weight: 600;
+    font-size: 30px;
+    margin-bottom: 8px;
+
+    @include max-w($md) {
+      font-size: 24px;
+    }
+  }
+
+  &__subtitle {
+    display: block;
+    margin-bottom: 15px;
+  }
+
+  &__link {
+    padding-bottom: 6px;
+    border-bottom: 2px solid;
+  }
+}

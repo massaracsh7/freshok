@@ -1,0 +1,179 @@
+.product-tabs {
+  border-top: 1px solid #C1C1C1;
+  padding-top: 110px;
+  max-width: 690px;
+  width: 100%;
+
+  margin: 0 auto;
+
+  @include max-w($xl) {
+    margin: 0;
+  }
+
+  &__top {
+    margin-bottom: 48px;
+    @extend %ruda;
+    font-size: 22px;
+
+    @include max-w($xl) {
+      font-size: 14px;
+      display: flex;
+      justify-content: space-between;
+    }
+  }
+
+  &__top-item {
+    display: inline-block;
+
+    &+.product-tabs__top-item {
+      margin-left: 55px;
+
+      @include max-w($xl) {
+        margin-left: 0;
+      }
+    }
+
+  }
+
+  &__top-item--active {
+    color: $black;
+    position: relative;
+
+    &::before {
+      content: '';
+      position: absolute;
+      top: -16px;
+      left: 0;
+      right: 0;
+      width: 100%;
+      height: 1px;
+      background-color: $green-900;
+    }
+  }
+
+
+
+  &__content-item {
+    display: none;
+
+    &.product-tabs__content-item--active {
+      display: block;
+    }
+  }
+
+  &__content-text {
+    color: #4F4F4F;
+    line-height: 1.6;
+
+    p:not(:last-child) {
+      margin-bottom: 15px;
+    }
+  }
+}
+
+.product-details {
+  &__item:not(:last-child) {
+    margin-bottom: 10px;
+  }
+}
+
+.comments {
+  margin-bottom: 72px;
+
+  &__title {
+    margin-bottom: 48px;
+  }
+
+  &__item {
+    &:not(:last-child) {
+      padding-bottom: 24px;
+      border-bottom: 1px solid #c1c1c1;
+      margin-bottom: 24px;
+    }
+  }
+
+  &__img {
+    margin-right: 24px;
+  }
+
+  &__content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 24px;
+  }
+
+  &__content-info {
+    display: flex;
+    flex-direction: column;
+    margin-right: auto;
+  }
+
+}
+
+.comments-form {
+  &__title {
+    font-size: 20px;
+
+  }
+
+  &__rating {
+    margin-bottom: 30px;
+  }
+
+  &__box {
+    margin-bottom: 30px;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__box-input {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__text-input {
+    width: 260px;
+    display: inline-block;
+    height: 54px;
+    padding: 0 20px;
+    border: 1px solid #f0f0f0;
+    margin-bottom: 24px;
+  }
+
+  &__label {
+    margin-bottom: 12px;
+  }
+
+  &__textarea {
+    border: 1px solid #f0f0f0;
+    padding: 15px 20px;
+    display: block;
+    width: 400px;
+    height: 165px;
+    resize: none;
+    margin-right: 30px;
+  }
+
+  &__btn {
+    cursor: pointer;
+    display: block;
+  }
+
+
+
+  &__input {
+    @extend %radio-hidden;
+
+    &:checked+.comments-form__radio,
+    .comments-form__radio+&:checked {
+      path {
+        fill: #ffc35b;
+      }
+    }
+  }
+
+  &__radio {
+    cursor: pointer;
+  }
+}

@@ -1,0 +1,63 @@
+.advant {
+  background-color: $silver-100;
+  padding-top: 48px;
+  padding-bottom: 30px;
+
+  @include max-w($md) {
+    padding-top: 30px;
+  }
+
+  &__list {
+    display: flex;
+    justify-content: center;
+    margin-right: 55px;
+
+    @include max-w($md) {
+      flex-direction: column;
+      margin-right: 0;
+    }
+  }
+
+  &__item {
+    max-width: 264px;
+    padding-left: 74px;
+    background-repeat: no-repeat;
+    background-position: left top;
+
+    @include max-w($md) {
+      max-width: 100%;
+    }
+
+    &--delivery {
+      background-image: url('../images/icons/scooter.svg');
+    }
+
+    &--return {
+      background-image: url('../images/icons/return.svg');
+    }
+
+    &--support {
+      background-image: url('../images/icons/support.svg');
+    }
+
+    &:not(:last-child) {
+      margin-right: 65px;
+
+      @include max-w($md) {
+        margin-right: 0;
+        margin-bottom: 30px;
+      }
+    }
+  }
+
+  &__title {
+    font-size: 16px;
+    margin-bottom: 7px;
+  }
+
+  &__text {
+    @include line-clamp(14px, 1.4, 2);
+    font-weight: 400;
+    color: $dark-500;
+  }
+}
