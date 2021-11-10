@@ -8,11 +8,9 @@
 .product-one {
   display: flex;
   margin-bottom: 63px;
-
   @include max-w($xl) {
     flex-direction: column;
   }
-
   &__slider {
     max-width: 630px;
     width: 100%;
