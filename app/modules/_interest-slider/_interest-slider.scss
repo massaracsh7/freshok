@@ -1,8 +1,14 @@
 .interest-slider {
   margin-bottom: 46px;
+  @include max-w($xl) {
+    margin-bottom: 64px;
+  }
 
   &__title {
     margin-bottom: 60px;
+    @include max-w($xl) {
+      margin-bottom: 30px;
+    }
   }
 
   &__list {

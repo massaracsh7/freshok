@@ -6,11 +6,14 @@
   height: 100%;
   background-color: rgba(0, 0, 0, 0.15);
   z-index: 20;
-  display: none;
+    transform: translateX(-100%);
+    border-radius: 15px;
+    transition: transform 0.5s,
+    opacity 0.5s;
   &__close {
     position: absolute;
-    right: 122px;
-    top: 74px;
+    right: 134px;
+    top: 92px;
     z-index: 21;
   }
 
@@ -45,13 +48,13 @@
 
      .slick-next {
        z-index: 1;
-       right: 0;
+       right: 60px;
        background-image: url(../images/icons/next.svg);
      }
 
      .slick-prev {
        z-index: 1;
-       left: 0;
+       left: 60px;
        background-image: url(../images/icons/prev.svg);
      }
 
@@ -63,8 +66,6 @@
       margin: 0 auto;
     }
   }
-
-
 
   .slick-dots {
     position: absolute;
@@ -92,6 +93,11 @@
 
 }
 
+ 
+
+
+
 .slider-popup--active {
-  display: flex;
-}
+  transform: translateX(0%);
+  opacity: 1;
+} 

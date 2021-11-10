@@ -5,6 +5,7 @@
 
   &__list {
     display: flex;
+    flex-flow: wrap;
   }
 
   &__item {
