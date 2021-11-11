@@ -259,45 +259,7 @@
       display: block;
       position: relative;
       margin-right: 15px;
-      /* 
-      &::after,
-      &::before {
-        content: "";
-        position: absolute;
-        width: 30px;
-        height: 2px;
-        background-color: $white;
-        left: 0;
-        top: 0;
-        z-index: -1;
-      }
-
-      &--close::after,
-      &--close::before {
-        content: "";
-        position: absolute;
-        top: -280px;
-        left: -150px;
-        background-color: $black;
-        transition: transform 0.5s;
-        z-index: 13;
-
-        @include max-w($sm) {
-          left: 200px;
-        }
-
-        @include max-w($tn) {
-          left: 210px;
-        }
-      }
-
-      &--close::after {
-        transform: rotate(45deg);
-      }
-
-      &--close::before {
-        transform: rotate(-45deg);
-      } */
+      
     }
 
   }
@@ -430,9 +392,9 @@
 
       &__img {
         height: 220px;
-
         @include max-w($lg) {
           width: 168px;
+          height: 126px;
         }
       }
 

@@ -1,7 +1,7 @@
 $(function () {
 
 
-  $('.product-slide__img').on('click', function () {
+  $('.product-slide').on('click', function () {
     $('.slider-popup').toggleClass('slider-popup--active');
     $('.overlay').addClass('overlay--active');
     $('body').addClass('lock');

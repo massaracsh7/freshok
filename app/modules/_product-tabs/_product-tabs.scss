@@ -1,10 +1,8 @@
 .product-tabs {
   border-top: 1px solid #c1c1c1;
-
   @include max-w($xl) {
     padding-top: 16px;
   }
-
   &__top {
     max-width: 690px;
     width: 100%;
@@ -14,7 +12,6 @@
     font-size: 22px;
     display: flex;
     justify-content: space-between;
-
     @include max-w($xl) {
       font-size: 14px;
       margin: 0;
@@ -23,32 +20,26 @@
   }
 
   &__top-item {
-
     @extend %ruda;
     text-transform: uppercase;
     color: #121212;
     font-size: 18px;
     font-weight: 600;
     padding-top: 16px;
-
     @include max-w($xl) {
       font-size: 14px;
     }
-
     &+.product-tabs__top-item {
       margin-left: 55px;
-
       @include max-w($xl) {
         margin-left: 0;
       }
     }
-
   }
 
   &__top-item--active {
     color: $green-900;
     position: relative;
-
     &::before {
       content: '';
       position: absolute;
@@ -69,7 +60,6 @@
     font-size: 16px;
     font-weight: 400;
     line-height: 1.6;
-
     @include max-w($xl) {
       margin: 0;
     }
@@ -209,9 +199,22 @@
     border: 1px solid #c1c1c1;
     border-radius: 3px;
     padding: 18px;
-    /*     max-width: 260px;
- */
     width: 100%;
+    transition: outline 0.2s,
+      color 0.2s;
+
+    &:active {
+      border-color: $green-900;
+    }
+
+    &:focus {
+      outline: 2px solid $green-200;
+      border-color: $green-900;
+    }
+
+    &::placeholder {
+      color: $silver-600;
+    }
 
     @include max-w($xl) {
       margin-bottom: 18px;
@@ -230,6 +233,7 @@
     color: #121212;
     max-width: 400px;
     width: 100%;
+    cursor: pointer;
   }
 
   &__textarea {
@@ -242,6 +246,19 @@
     max-width: 400px;
     width: 100%;
     resize: vertical;
+
+    &:active {
+      border-color: $green-900;
+    }
+
+    &:focus {
+      outline: 2px solid $green-200;
+      border-color: $green-900;
+    }
+
+    &::placeholder {
+      color: $silver-600;
+    }
   }
 
   &__btn {
@@ -251,17 +268,33 @@
   }
 
   &__input {
-    @extend %radio-hidden;
+    @extend %checkbox-hidden;
+  }
 
-    &:checked+.comments-form__radio,
-    .comments-form__radio+&:checked {
-      path {
-        fill: #ffc35b;
-      }
+  &__input:checked+.comments-form__checkbox {
+    background-image: url(../images/icons/arrow-check.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+    border-color: #505050;
+  }
+
+  &__checkbox {
+    width: 20px;
+    height: 20px;
+    border: 1px solid #c1c1c1;
+    background-color: #F6F6F6;
+    position: absolute;
+    border-radius: 3px;
+
+    &:hover {
+      border-color: #505050;
     }
+
   }
 
-  &__radio {
-    cursor: pointer;
+  &__label-text {
+    margin-left: 25px;
   }
+
+
 }
