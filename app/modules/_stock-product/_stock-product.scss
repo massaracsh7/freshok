@@ -1,0 +1,33 @@
+.stock-product {
+  background-color: $silver-200;
+  padding: 72px 0;
+
+  @include max-w($md) {
+    padding: 48px 0;
+  }
+
+  &__list {
+    margin-bottom: 48px;
+
+    @include max-w($xl) {
+      grid-template-columns: repeat(3, 1fr);
+      grid-template-rows: repeat(3, 1fr);
+      justify-items: center;
+      grid-gap: 15px;
+      margin-bottom: 24px;
+    }
+
+    @include max-w($lg) {
+      grid-template-columns: repeat(2, 1fr);
+      grid-template-rows: repeat(4, 1fr);
+      justify-items: center;
+      grid-gap: 15px;
+      margin-bottom: 24px;
+    }
+
+    @include max-w($md) {
+      grid-template-columns: 1fr;
+      grid-template-rows: repeat(8, 1fr);
+    }
+  }
+}

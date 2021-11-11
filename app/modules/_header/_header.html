@@ -1,0 +1,174 @@
+  <h1 class="sr-only">фрешок - интернет-магазин продуктов</h1>
+  
+  <header class="header">
+    <nav class="header__top">
+      <div class="container">
+        <div class="header__inner  header__inner--top">
+          <button class="header__btn" aria-label="открыть меню" type="button"></button>
+          <ul class="header__info info">
+            <li class="info__item">
+              <a class="info__link info__link--delivery" href="#">
+                адрес и время доставки
+              </a>
+            </li>
+            <li class="info__item">
+              <a class="info__link info__link--phone" href="#">горячая линия 24/7</a>
+            </li>
+          </ul>
+          <div class="header__menu">
+            <ul class="header__list">
+              <li class="header__item">
+                <a class="header__link" href="#">доставка</a>
+              </li>
+              <li class="header__item">
+                <a class="header__link" href="#">о нас</a>
+              </li>
+              <li class="header__item">
+                <a class="header__link" href="#">новости</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+      </div>
+    </nav>
+
+    <nav class="header__bottom">
+      <div class="container">
+
+        <div class="header__inner">
+          <a class="logo header__logo" href="#">
+
+            <picture class="logo__img">
+              <source srcset="images/logo-short.svg" media="(max-width: 992px)">
+              <img src="images/logo.svg" alt="логотип сайта фрешок" width="200" height="60">
+            </picture>
+          </a>
+          <button class="header__catalog open-catalog" type="button">Каталог продуктов</button>
+
+
+          <form class="header__form form-search">
+            <label class="sr-only">Найти продукт</label>
+            <input class="form-search__text" name="search" placeholder="Найти в магазине ..." type="search" required>
+            <button class="btn form-search__btn" type="submit">поиск</button>
+          </form>
+
+
+          <div class="user-nav">
+            <button class="user-nav__open" type="button">
+              <svg height="24" width="24">
+                <use xlink:href="images/sprite.svg#search"></use>
+              </svg>
+            </button>
+            <a class="user-nav__link user-nav__link--user" href="#" aria-label="профиль">
+              <svg height="31" width="32">
+                <use xlink:href="images/sprite.svg#user"></use>
+              </svg>
+            </a>
+
+            <button class="user-nav__link user-nav__link--heart" type="button" aria-label="избранное">
+              <svg height="29" width="32">
+                <use xlink:href="images/sprite.svg#heart"></use>
+              </svg>
+              <span class="user-nav__num">12</span>
+            </button>
+
+            <button class="user-nav__link user-nav__link--cart" type="button" aria-label="корзина">
+              <svg height="31" width="32">
+                <use xlink:href="images/sprite.svg#cart"></use>
+              </svg>
+              <span class="user-nav__num">12</span>
+            </button>
+
+          </div>
+
+        </div>
+      </div>
+    </nav>
+
+    <div class="mob-nav">
+      <a class="mob-nav__logo" href="#">
+        <img class="mob-nav__img" src="images/logo-mob.svg" alt="логотип сайта фрешок" width="200" height="60">
+      </a>
+      <div class="mob-nav__user">
+        <svg height="32" width="25">
+          <use xlink:href="images/sprite.svg#user"></use>
+        </svg>
+        <a class="mob-nav__link mob-nav__link--enter" href="#">Вход</a>
+        <a class="mob-nav__link mob-nav__link--reg" href="#">Регистрация</a>
+      </div>
+      <button class="mob-nav__catalog open-catalog" type="button">Каталог продуктов</button>
+      <address class="mob-nav__contacts contacts">
+
+        <div class="mob-nav__data contacts__data">
+          <a class="mob-nav__phone" href="tel:+7 907 288 365"> +7 907 288 365</a>
+          <a class="mob-nav__address" href="#"> Санкт-Петербург, Ул.<br> Ленина, 1
+          </a>
+        </div>
+
+        <ul class="mob-nav__social-list contacts__social-list">
+          <li class="mob-nav__social-item contacts__social-item">
+            <a class="mob-nav__social-link contacts__social-link" href="#" aria-label="facebook">
+              <svg height="32" width="32">
+                <use xlink:href="images/sprite.svg#facebook"></use>
+              </svg>
+            </a>
+          </li>
+
+          <li class="contacts__social-item">
+            <a class="mob-nav__social-link contacts__social-link" href="#" aria-label="youtube">
+              <svg height="32" width="32">
+                <use xlink:href="images/sprite.svg#youtube"></use>
+              </svg>
+            </a>
+          </li>
+
+          <li class="contacts__social-item">
+            <a class="mob-nav__social-link contacts__social-link" href="#" aria-label="telegram">
+              <svg height="32" width="32">
+                <use xlink:href="images/sprite.svg#telegram"></use>
+              </svg>
+            </a>
+          </li>
+
+          <li class="contacts__social-item">
+            <a class="mob-nav__social-link contacts__social-link" href="#" aria-label="instagram">
+              <svg height="32" width="32">
+                <use xlink:href="images/sprite.svg#instagram"></use>
+              </svg>
+            </a>
+          </li>
+        </ul>
+      </address>
+
+      <ul class="menu mob-nav__menu">
+        <li class="menu__item">
+          <a class="menu__link" href="#">О нас</a>
+        </li>
+        <li class="menu__item">
+          <a class="menu__link" href="#">Контакты</a>
+        </li>
+        <li class="menu__item">
+          <a class="menu__link" href="#">Публичная оферта</a>
+        </li>
+        <li class="menu__item">
+          <a class="menu__link" href="#">Оплата и доставка</a>
+        </li>
+        <li class="menu__item">
+          <a class="menu__link" href="#">Вакансии</a>
+        </li>
+        <li class="menu__item">
+          <a class="menu__link" href="#">Акции</a>
+        </li>
+        <li class="menu__item">
+          <a class="menu__link" href="#">Отзывы</a>
+        </li>
+        <li class="menu__item">
+          <a class="menu__link" href="#">Новости</a>
+        </li>
+      </ul>
+    </div>
+
+  </header>
+
+  <div class="overlay"></div>

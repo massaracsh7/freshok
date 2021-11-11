@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="ru">
+
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="images/favicon.png" rel="shortcut icon" type="image/x-icon">
+    <link rel="stylesheet" href="css/product.min.css">
+    <title>Фрешок - онлайн-маркет</title>
+  </head>
+
+  <body>
+    {% include 'app/modules/_header/_header.html' %}
+
+    {% include 'app/modules/_breadcrumbs/_breadcrumbs.html' %}
+    <li class="breadcrumbs__item">
+      <a class="breadcrumbs__link" href="#">Питахайя красная с белой мякотью</a>
+    </li>
+  </ul>
+</div>
+</div>
+
+<main class="main">
+
+<section class="product-page">
+
+    {% include 'app/modules/_product-one/_product-one.html' %}
+
+    {% include 'app/modules/_product-tabs/_product-tabs.html' %}
+  
+</section>
+
+{% include 'app/modules/_slider-popup/_slider-popup.html' %}
+
+{% include 'app/modules/_interest-slider/_interest-slider.html' %}
+
+</main>
+
+{% include 'app/modules/_footer/_footer.html' %}
+
+<script src="js/main.min.js"></script>
+</body>
+
+</html>

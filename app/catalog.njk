@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="ru">
+
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="images/favicon.png" rel="shortcut icon" type="image/x-icon">
+    <link rel="stylesheet" href="css/catalog.min.css">
+    <title>Фрешок - онлайн-маркет</title>
+  </head>
+
+  <body>
+
+    {% include 'app/modules/_header/_header.html' %}
+
+    {% include 'app/modules/_breadcrumbs/_breadcrumbs.html' %}
+        </ul>
+      </div>
+    </div>
+
+<main class="main">
+
+{% include 'app/modules/_catalog/_catalog.html' %}
+
+<section class="advant">
+{% include 'app/modules/_advant/_advant.html' %}
+
+</main>
+
+{% include 'app/modules/_footer/_footer.html' %}
+
+<script src="js/main.min.js"></script>
+</body>
+
+</html>
