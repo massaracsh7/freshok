@@ -1,34 +1,41 @@
 .product-tabs {
-  border-top: 1px solid #c1c1c1;
+  border-top: 1px solid $silver-600;
   @include max-w($xl) {
     padding-top: 16px;
   }
+
+  &__top,
+  &__top-item {
+    @extend %ruda;
+    @include max-w($xl) {
+      font-size: 14px;
+    }
+  }
+
   &__top {
     max-width: 690px;
     width: 100%;
     margin: 0 auto;
     margin-bottom: 48px;
-    @extend %ruda;
     font-size: 22px;
     display: flex;
     justify-content: space-between;
     @include max-w($xl) {
-      font-size: 14px;
       margin: 0;
       margin-bottom: 30px;
     }
   }
 
   &__top-item {
-    @extend %ruda;
     text-transform: uppercase;
-    color: #121212;
+    color: $dark-900;
     font-size: 18px;
     font-weight: 600;
     padding-top: 16px;
-    @include max-w($xl) {
-      font-size: 14px;
+    &:hover {
+      color: $green-900;
     }
+    
     &+.product-tabs__top-item {
       margin-left: 55px;
       @include max-w($xl) {
@@ -56,7 +63,7 @@
     max-width: 690px;
     width: 100%;
     margin: 0 auto;
-    color: rgb(80, 80, 80);
+    color: $dark-500;
     font-size: 16px;
     font-weight: 400;
     line-height: 1.6;
@@ -67,16 +74,14 @@
 
   &__content-item {
     display: none;
-
     &.product-tabs__content-item--active {
       display: block;
     }
   }
 
   &__content-text {
-    color: #4F4F4F;
+    color: $dark-600;
     line-height: 1.6;
-
     p:not(:last-child) {
       margin-bottom: 35px;
     }
@@ -91,7 +96,6 @@
 
 .comments {
   margin-bottom: 72px;
-
   @include max-w($xl) {
     margin-bottom: 30px;
   }
@@ -99,7 +103,7 @@
   &__title {
     @extend %ruda;
     text-transform: uppercase;
-    color: #121212;
+    color: $dark-900;
     font-size: 18px;
     font-weight: 600;
     margin-bottom: 48px;
@@ -113,7 +117,7 @@
   &__item {
     &:not(:last-child) {
       padding-bottom: 24px;
-      border-bottom: 1px solid #c1c1c1;
+      border-bottom: 1px solid $silver-600;
       margin-bottom: 24px;
     }
   }
@@ -133,7 +137,7 @@
     display: flex;
     flex-direction: column;
     margin-right: auto;
-    color: rgb(80, 80, 80);
+    color: $dark-500;
     font-size: 16px;
     font-weight: 400;
     line-height: 1.6;
@@ -142,7 +146,7 @@
   &__content-name {
     font-size: 14px;
     font-weight: 700;
-    color: #121212;
+    color: $dark-900;
   }
 
 }
@@ -196,20 +200,20 @@
     display: block;
     margin-top: 12px;
     margin-bottom: 12px;
-    border: 1px solid #c1c1c1;
+    border: 1px solid $silver-600;
     border-radius: 3px;
     padding: 18px;
     width: 100%;
     transition: outline 0.2s,
       color 0.2s;
 
-    &:active {
+    &:active,
+    &:focus {
       border-color: $green-900;
     }
 
     &:focus {
       outline: 2px solid $green-200;
-      border-color: $green-900;
     }
 
     &::placeholder {
@@ -230,7 +234,7 @@
   }
 
   &__label {
-    color: #121212;
+    color: $dark-900;
     max-width: 400px;
     width: 100%;
     cursor: pointer;
@@ -239,7 +243,7 @@
   &__textarea {
     display: block;
     margin-top: 12px;
-    border: 1px solid #c1c1c1;
+    border: 1px solid $silver-600;
     border-radius: 3px;
     padding: 18px;
     height: 165px;
@@ -247,13 +251,13 @@
     width: 100%;
     resize: vertical;
 
-    &:active {
+    &:active,
+    &:focus {
       border-color: $green-900;
     }
 
     &:focus {
       outline: 2px solid $green-200;
-      border-color: $green-900;
     }
 
     &::placeholder {
@@ -275,19 +279,18 @@
     background-image: url(../images/icons/arrow-check.svg);
     background-repeat: no-repeat;
     background-position: center;
-    border-color: #505050;
+    border-color: $dark-500;
   }
 
   &__checkbox {
     width: 20px;
     height: 20px;
-    border: 1px solid #c1c1c1;
-    background-color: #F6F6F6;
+    border: 1px solid $dark-500;
+    background-color: $silver-100;
     position: absolute;
     border-radius: 3px;
-
     &:hover {
-      border-color: #505050;
+      border-color: $dark-500;
     }
 
   }

@@ -10,11 +10,9 @@
   border-radius: 15px;
   transition: transform 0.5s,
     opacity 0.5s;
-
   &--active {
     transform: translateX(0%);
     opacity: 1;
-
     @include max-w($lg) {
       background-color: $white;
       border-radius: 0;
@@ -26,7 +24,6 @@
     right: 134px;
     top: 92px;
     z-index: 21;
-
     @include max-w($lg) {
       svg {
         width: 18px;
@@ -93,13 +90,11 @@
       z-index: 1;
       right: 60px;
       background-image: url(../images/icons/next.svg);
-
       &:hover,
       &:active,
       &:focus {
         background-image: url(../images/icons/next-active.svg);
       }
-
       @include max-w($lg) {
         right: 0;
       }
@@ -109,13 +104,11 @@
       z-index: 1;
       left: 60px;
       background-image: url(../images/icons/prev.svg);
-
       &:hover,
       &:active,
       &:focus {
         background-image: url(../images/icons/prev-active.svg);
       }
-
       @include max-w($lg) {
         left: 0;
       }
